@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="mapping"/>
+
+  <xs:complexType name="structuredSearch"/>
+
+  <xs:complexType name="textSearch"/>
+
+  <xs:complexType name="eclecticQueryBuilder"/>
+
+  <xs:complexType name="mappingManager"/>
+
+  <xs:complexType name="sparqLtoJSON"/>
+
+  <xs:complexType name="simpleQueryBuilder"/>
+
+  <xs:complexType name="textQueryBuilder"/>
+
+  <xs:complexType name="restInvoker"/>
+</xs:schema>
+

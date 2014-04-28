@@ -1,0 +1,21 @@
+NAME,factforge
+ENDPOINT,http://factforge.net/sparql
+PREFIX,geo,http://www.w3.org/2003/01/geo/wgs84_pos#
+PREFIX,omgeo,http://www.ontotext.com/owlim/geo#
+PREFIX,geo-onto,http://www.geonames.org/ontology#
+PREFIX,fb,http://rdf.freebase.com/ns/
+PREFIX,gml,http://www.opengis.net/gml
+PREFIX,dbp-ont,http://dbpedia.org/ontology
+PREFIX,foaf,http://xmlns.com/foaf/0.1/
+ACTYPE,fb:time.event
+ACATT,rdfs:label,xml:string
+ACATT,foaf:isPrimaryTopicOf,foaf:Document
+LOC,,gml:_Feature
+LOC,,geo-onto:Feature
+LOCLAT,geo:lat
+LOCLON,geo:long
+LOCATT,rdfs:label,xml:string
+LOCATT,geo-onto:name,xml:string
+RECEX,%LOCPAR% omgeo:within( %LAT1% %LON1% %LAT2% %LON2% )
+CIRCEX,%LOCPAR% omgeo:nearby( %LAT1% %LON1% %RAD% )
+TIME,dbp-ont:date,xml:String

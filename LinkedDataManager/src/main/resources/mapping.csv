@@ -1,0 +1,12 @@
+NAME,name
+ENDPOINT,uri
+PREFIX,pref,prefuri
+ACTYPE,typeuri
+ACATT,pred1,obj1
+ACATT,pred2,obj2
+LOC,pred,typeuri
+LOCLAT,lat1pred
+LOCLON,lon1pred
+RECEX,funcsyntax
+CIRCEX,funcsyntax
+TIME,pred,type

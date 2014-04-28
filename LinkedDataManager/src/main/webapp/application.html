@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>SMART Project: Linked Data Manager REST API</title><style type="text/css">
+                    body {
+                        font-family: sans-serif;
+                        font-size: 0.85em;
+                        margin: 2em 8em;
+                    }
+                    .methods {
+                        background-color: #eef;
+                        padding: 1em;
+                    }
+                    h1 {
+                        font-size: 2.5em;
+                    }
+                    h2 {
+                        border-bottom: 1px solid black;
+                        margin-top: 1em;
+                        margin-bottom: 0.5em;
+                        font-size: 2em;
+                       }
+                    h3 {
+                        color: orange;
+                        font-size: 1.75em;
+                        margin-top: 1.25em;
+                        margin-bottom: 0em;
+                    }
+                    h4 {
+                        margin: 0em;
+                        padding: 0em;
+                        border-bottom: 2px solid white;
+                    }
+                    h6 {
+                        font-size: 1.1em;
+                        color: #99a;
+                        margin: 0.5em 0em 0.25em 0em;
+                    }
+                    dd {
+                        margin-left: 1em;
+                    }
+                    tt {
+                        font-size: 1.2em;
+                    }
+                    table {
+                        margin-bottom: 0.5em;
+                    }
+                    th {
+                        text-align: left;
+                        font-weight: normal;
+                        color: black;
+                        border-bottom: 1px solid black;
+                        padding: 3px 6px;
+                    }
+                    td {
+                        padding: 3px 6px;
+                        vertical-align: top;
+                        background-color: f6f6ff;
+                        font-size: 0.85em;
+                    }
+                    td p {
+                        margin: 0px;
+                    }
+                    ul {
+                        padding-left: 1.75em;
+                    }
+                    p + ul, p + ol, p + dl {
+                        margin-top: 0em;
+                    }
+                    .optional {
+                        font-weight: normal;
+                        opacity: 0.75;
+                    }
+                </style></head><body><h1>SMART Project: Linked Data Manager REST API</h1><p>
+		<h3 xmlns="">URL TO INVOKE THE METHODS: http://medialab2.atosresearch.eu:8080/SMART_LinkedDataManagerREST/rest/ + method<br>
+</h3>
+		<h2 xmlns=""><a href="application.wadl" target="_blank">See WADL File</a></h2><br xmlns="">
+		
+    </p><ul><li><a href="#resources">Resources</a><ul><li><a href="#id114921">http://medialab2.atosresearch.eu:8080/SMART_LinkedDataManagerREST/rest/structuredSearch</a><ul><li><a href="#id114918">http://medialab2.atosresearch.eu:8080/SMART_LinkedDataManagerREST/rest/structuredSearch/locRec</a></li><li><a href="#id114664">http://medialab2.atosresearch.eu:8080/SMART_LinkedDataManagerREST/rest/structuredSearch/locCirc</a></li><li><a href="#id113491">http://medialab2.atosresearch.eu:8080/SMART_LinkedDataManagerREST/rest/structuredSearch/actRec</a></li><li><a href="#id112821">http://medialab2.atosresearch.eu:8080/SMART_LinkedDataManagerREST/rest/structuredSearch/actCirc</a></li></ul></li><li><a href="#id113540">http://medialab2.atosresearch.eu:8080/SMART_LinkedDataManagerREST/rest/txtSearch</a><ul><li><a href="#id113531">http://medialab2.atosresearch.eu:8080/SMART_LinkedDataManagerREST/rest/txtSearch/activities</a></li><li><a href="#id114127">http://medialab2.atosresearch.eu:8080/SMART_LinkedDataManagerREST/rest/txtSearch/venues</a></li></ul></li></ul></li></ul><h2 id="resources">Resources</h2><div class="resource"><h3 id="id114921">/structuredSearch</h3><h6>Methods</h6><div class="methods"></div></div><div class="resource"><h3 id="id114918">/structuredSearch/locRec<span class="optional">?lat1</span><span class="optional">&amp;long1</span><span class="optional">&amp;lat2</span><span class="optional">&amp;long2</span><span class="optional">&amp;dataset</span></h3><h6>Methods</h6><div class="methods"><div class="method"><h4 id="http://medialab2.atosresearch.eu:8080/SMART_LinkedDataManagerREST/rest#sLocRec">GET</h4><p>Finding locations within a geo-spatial rectangle identified by the exact geographical coordinates of its lower-left corner and its upper-right corner</p><h6>request query parameters</h6><table><tr><th>parameter</th><th>value</th><th>description</th></tr><tr><td><p><strong>lat1</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#float">float</a></em></p></td><td><p>Between 0 and 90 degrees. Positive (North) o negative (South)</p></td></tr><tr><td><p><strong>long1</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#float">float</a></em></p></td><td><p>Between 0 and 180 degrees. Positive (East) o negative (West)</p></td></tr><tr><td><p><strong>lat2</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#float">float</a></em></p></td><td><p>Between 0 and 90 degrees. Positive (North) o negative (South)</p></td></tr><tr><td><p><strong>long2</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#float">float</a></em></p></td><td><p>Between 0 and 180 degrees. Positive (East) o negative (West)</p></td></tr><tr><td><p><strong>dataset</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#string">string</a></em></p><p>Default: <tt>factforge</tt></p></td><td><p>The dataset in which perform the search. By default Factforge</p></td></tr></table><p><em>available response representations:</em></p><ul><li><a href="#id114668">application/json<abbr title="{http://research.sun.com/wadl/2006/10} "></abbr></a></li></ul></div></div></div><div class="resource"><h3 id="id114664">/structuredSearch/locCirc<span class="optional">?lat1</span><span class="optional">&amp;long1</span><span class="optional">&amp;radius</span><span class="optional">&amp;dataset</span></h3><h6>Methods</h6><div class="methods"><div class="method"><h4 id="http://medialab2.atosresearch.eu:8080/SMART_LinkedDataManagerREST/rest#sLocCirc">GET</h4><p>Finding locations located within a geo-spatial circle identified by the geo-graphical coordinates (a pair of latitude and longitude) of its centre and its radius</p><h6>request query parameters</h6><table><tr><th>parameter</th><th>value</th><th>description</th></tr><tr><td><p><strong>lat1</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#float">float</a></em></p></td><td><p>The latitude coordinate indicating the centre. Between 0 and 90 degrees. Positive (North) o negative (South)</p></td></tr><tr><td><p><strong>long1</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#float">float</a></em></p></td><td><p>The longitude coordinate indicating the centre. Between 0 and 180 degrees. Positive (East) o negative (West)</p></td></tr><tr><td><p><strong>radius</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#float">float</a></em></p></td><td><p>The radio from the centre</p></td></tr><tr><td><p><strong>dataset</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#string">string</a></em></p><p>Default: <tt>factforge</tt></p></td><td><p>The dataset in which perform the search. By default Factforge</p></td></tr></table><p><em>available response representations:</em></p><ul><li><a href="#id113494">application/json<abbr title="{http://research.sun.com/wadl/2006/10} "></abbr></a></li></ul></div></div></div><div class="resource"><h3 id="id113491">/structuredSearch/actRec<span class="optional">?lat1</span><span class="optional">&amp;long1</span><span class="optional">&amp;lat2</span><span class="optional">&amp;long2</span><span class="optional">&amp;since</span><span class="optional">&amp;until</span><span class="optional">&amp;dataset</span></h3><h6>Methods</h6><div class="methods"><div class="method"><h4 id="http://medialab2.atosresearch.eu:8080/SMART_LinkedDataManagerREST/rest#sActRec">GET</h4><p>Finding activities within a geo-spatial rectangle identified by the exact geographical coordinates of its lower-left corner and its upper-right corner</p><h6>request query parameters</h6><table><tr><th>parameter</th><th>value</th><th>description</th></tr><tr><td><p><strong>lat1</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#float">float</a></em></p></td><td><p>Between 0 and 90 degrees. Positive (North) o negative (South)</p></td></tr><tr><td><p><strong>long1</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#float">float</a></em></p></td><td><p>Between 0 and 180 degrees. Positive (East) o negative (West)</p></td></tr><tr><td><p><strong>lat2</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#float">float</a></em></p></td><td><p>Between 0 and 90 degrees. Positive (North) o negative (South)</p></td></tr><tr><td><p><strong>long2</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#float">float</a></em></p></td><td><p>Between 0 and 180 degrees. Positive (East) o negative (West)</p></td></tr><tr><td><p><strong>since</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#string">string</a></em></p><p>Default: <tt></tt></p></td><td><p>To delimit the date (an optional requirement)</p></td></tr><tr><td><p><strong>until</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#string">string</a></em></p><p>Default: <tt></tt></p></td><td><p>To delimit the date (an optional requirement)</p></td></tr><tr><td><p><strong>dataset</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#string">string</a></em></p><p>Default: <tt>factforge</tt></p></td><td><p>The dataset in which perform the search. By default Factforge</p></td></tr></table><p><em>available response representations:</em></p><ul><li><a href="#id112830">application/json<abbr title="{http://research.sun.com/wadl/2006/10} "></abbr></a></li></ul></div></div></div><div class="resource"><h3 id="id112821">/structuredSearch/actCirc<span class="optional">?lat1</span><span class="optional">&amp;long1</span><span class="optional">&amp;radius</span><span class="optional">&amp;since</span><span class="optional">&amp;until</span><span class="optional">&amp;dataset</span></h3><h6>Methods</h6><div class="methods"><div class="method"><h4 id="http://medialab2.atosresearch.eu:8080/SMART_LinkedDataManagerREST/rest#sActCirc">GET</h4><p>Finding locations located within a geo-spatial circle identified by the geo-graphical coordinates (a pair of latitude and longitude) of its centre and its radius</p><h6>request query parameters</h6><table><tr><th>parameter</th><th>value</th><th>description</th></tr><tr><td><p><strong>lat1</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#float">float</a></em></p></td><td><p>The latitude coordinate indicating the centre. Between 0 and 90 degrees. Positive (North) o negative (South)</p></td></tr><tr><td><p><strong>long1</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#float">float</a></em></p></td><td><p>The longitude coordinate indicating the centre. Between 0 and 180 degrees. Positive (East) o negative (West)</p></td></tr><tr><td><p><strong>radius</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#float">float</a></em></p></td><td><p>The radio from the centre</p></td></tr><tr><td><p><strong>since</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#string">string</a></em></p><p>Default: <tt></tt></p></td><td><p>To delimit the date (an optional requirement)</p></td></tr><tr><td><p><strong>until</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#string">string</a></em></p><p>Default: <tt></tt></p></td><td><p>To delimit the date (an optional requirement)</p></td></tr><tr><td><p><strong>dataset</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#string">string</a></em></p><p>Default: <tt>factforge</tt></p></td><td><p>The dataset in which perform the search. By default Factforge</p></td></tr></table><p><em>available response representations:</em></p><ul><li><a href="#id113543">application/json<abbr title="{http://research.sun.com/wadl/2006/10} "></abbr></a></li></ul></div></div></div><div class="resource"><h3 id="id113540">/txtSearch</h3><h6>Methods</h6><div class="methods"></div></div><div class="resource"><h3 id="id113531">/txtSearch/activities<span class="optional">?label</span><span class="optional">&amp;lang</span><span class="optional">&amp;dataset</span></h3><h6>Methods</h6><div class="methods"><div class="method"><h4 id="http://medialab2.atosresearch.eu:8080/SMART_LinkedDataManagerREST/rest#searchActivity">GET</h4><p>Finding activities identified by a certain keywords</p><h6>request query parameters</h6><table><tr><th>parameter</th><th>value</th><th>description</th></tr><tr><td><p><strong>label</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#string">string</a></em></p></td><td><p>The keywords to search</p></td></tr><tr><td><p><strong>lang</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#string">string</a></em></p><p>Default: <tt>en</tt></p></td><td><p>The language of the keywords</p></td></tr><tr><td><p><strong>dataset</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#string">string</a></em></p><p>Default: <tt>dbpedia</tt></p></td><td><p>The dataset in which perform the search. By default DBpedia</p></td></tr></table><p><em>available response representations:</em></p><ul><li><a href="#id114133">application/json<abbr title="{http://research.sun.com/wadl/2006/10} "></abbr></a></li></ul></div></div></div><div class="resource"><h3 id="id114127">/txtSearch/venues<span class="optional">?label</span><span class="optional">&amp;lang</span><span class="optional">&amp;dataset</span></h3><h6>Methods</h6><div class="methods"><div class="method"><h4 id="http://medialab2.atosresearch.eu:8080/SMART_LinkedDataManagerREST/rest#searchLocation">GET</h4><p>Finding venues identified by a certain keywords</p><h6>request query parameters</h6><table><tr><th>parameter</th><th>value</th><th>description</th></tr><tr><td><p><strong>label</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#string">string</a></em></p></td><td><p>The keywords to search</p></td></tr><tr><td><p><strong>lang</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#string">string</a></em></p><p>Default: <tt>en</tt></p></td><td><p>The language of the keywords</p></td></tr><tr><td><p><strong>dataset</strong></p></td><td><p><em><a href="http://www.w3.org/TR/xmlschema-2/#string">string</a></em></p><p>Default: <tt>dbpedia</tt></p></td><td><p>The dataset in which perform the search. By default DBpedia</p></td></tr></table><p><em>available response representations:</em></p><ul><li><a href="#id114326">application/json<abbr title="{http://research.sun.com/wadl/2006/10} "></abbr></a></li></ul></div></div></div></body></html>

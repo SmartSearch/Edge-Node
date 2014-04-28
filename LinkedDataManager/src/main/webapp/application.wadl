@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns2:application
+        xmlns:ns2="http://research.sun.com/wadl/2006/10"><ns2:doc
+        jersey:generatedBy="Jersey: 1.8 06/24/2011 12:17 PM"
+        xmlns:jersey="http://jersey.java.net/"/><ns2:doc
+        title="SMART Project: Linked Data Manager REST API"
+                xml:lang="en"><![CDATA[
+		]]><h3>URL TO INVOKE THE METHODS: http://medialab2.atosresearch.eu:8080/SMART_LinkedDataManagerREST/rest/ + method<br/></h3><![CDATA[
+		]]><h2><a
+                href="application.wadl"
+            target="_blank">See WADL File</a></h2><br/><![CDATA[
+		
+    ]]></ns2:doc><ns2:grammars><ns2:include
+        href="schema.xsd"/></ns2:grammars><ns2:resources
+            base="http://medialab2.atosresearch.eu:8080/SMART_LinkedDataManagerREST/rest"><ns2:resource
+                path="txtSearch"><ns2:resource
+                    path="activities"><ns2:method id="searchActivity"
+                            name="GET"><ns2:doc><![CDATA[Finding activities identified by a certain keywords]]></ns2:doc><ns2:request><ns2:param
+                            name="label" style="query" type="xs:string"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[The keywords to search]]></ns2:doc></ns2:param><ns2:param
+                            name="lang" style="query" type="xs:string"
+                            default="en"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[The language of the keywords]]></ns2:doc></ns2:param><ns2:param
+                            name="dataset" style="query"
+                            type="xs:string" default="dbpedia"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[The dataset in which perform the search. By default DBpedia]]></ns2:doc></ns2:param></ns2:request><ns2:response><ns2:doc><![CDATA[A JSON file format with the found activities]]></ns2:doc><ns2:representation
+                mediaType="application/json"/></ns2:response></ns2:method></ns2:resource><ns2:resource
+                    path="venues"><ns2:method id="searchLocation"
+                            name="GET"><ns2:doc><![CDATA[Finding venues identified by a certain keywords]]></ns2:doc><ns2:request><ns2:param
+                            name="label" style="query" type="xs:string"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[The keywords to search]]></ns2:doc></ns2:param><ns2:param
+                            name="lang" style="query" type="xs:string"
+                            default="en"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[The language of the keywords]]></ns2:doc></ns2:param><ns2:param
+                            name="dataset" style="query"
+                            type="xs:string" default="dbpedia"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[The dataset in which perform the search. By default DBpedia]]></ns2:doc></ns2:param></ns2:request><ns2:response><ns2:doc><![CDATA[A JSON file format with the found venues]]></ns2:doc><ns2:representation
+            mediaType="application/json"/></ns2:response></ns2:method></ns2:resource></ns2:resource><ns2:resource
+                path="structuredSearch"><ns2:resource
+                    path="actRec"><ns2:method id="sActRec"
+                            name="GET"><ns2:doc><![CDATA[Finding activities within a geo-spatial rectangle identified by the exact geographical coordinates of its lower-left corner and its upper-right corner]]></ns2:doc><ns2:request><ns2:param
+                            name="lat1" style="query" type="xs:float"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[Between 0 and 90 degrees. Positive (North) o negative (South)]]></ns2:doc></ns2:param><ns2:param
+                            name="long1" style="query" type="xs:float"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[Between 0 and 180 degrees. Positive (East) o negative (West)]]></ns2:doc></ns2:param><ns2:param
+                            name="lat2" style="query" type="xs:float"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[Between 0 and 90 degrees. Positive (North) o negative (South)]]></ns2:doc></ns2:param><ns2:param
+                            name="long2" style="query" type="xs:float"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[Between 0 and 180 degrees. Positive (East) o negative (West)]]></ns2:doc></ns2:param><ns2:param
+                            name="since" style="query" type="xs:string"
+                            default=""
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[To delimit the date (an optional requirement)]]></ns2:doc></ns2:param><ns2:param
+                            name="until" style="query" type="xs:string"
+                            default=""
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[To delimit the date (an optional requirement)]]></ns2:doc></ns2:param><ns2:param
+                            name="dataset" style="query"
+                            type="xs:string" default="factforge"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[The dataset in which perform the search. By default Factforge]]></ns2:doc></ns2:param></ns2:request><ns2:response><ns2:doc><![CDATA[A JSON file format with the found activities]]></ns2:doc><ns2:representation
+                mediaType="application/json"/></ns2:response></ns2:method></ns2:resource><ns2:resource
+                    path="actCirc"><ns2:method id="sActCirc"
+                            name="GET"><ns2:doc><![CDATA[Finding locations located within a geo-spatial circle identified by the geo-graphical coordinates (a pair of latitude and longitude) of its centre and its radius]]></ns2:doc><ns2:request><ns2:param
+                            name="lat1" style="query" type="xs:float"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[The latitude coordinate indicating the centre. Between 0 and 90 degrees. Positive (North) o negative (South)]]></ns2:doc></ns2:param><ns2:param
+                            name="long1" style="query" type="xs:float"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[The longitude coordinate indicating the centre. Between 0 and 180 degrees. Positive (East) o negative (West)]]></ns2:doc></ns2:param><ns2:param
+                            name="radius" style="query" type="xs:float"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[The radio from the centre]]></ns2:doc></ns2:param><ns2:param
+                            name="since" style="query" type="xs:string"
+                            default=""
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[To delimit the date (an optional requirement)]]></ns2:doc></ns2:param><ns2:param
+                            name="until" style="query" type="xs:string"
+                            default=""
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[To delimit the date (an optional requirement)]]></ns2:doc></ns2:param><ns2:param
+                            name="dataset" style="query"
+                            type="xs:string" default="factforge"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[The dataset in which perform the search. By default Factforge]]></ns2:doc></ns2:param></ns2:request><ns2:response><ns2:doc><![CDATA[A JSON file format with the found activities]]></ns2:doc><ns2:representation
+                mediaType="application/json"/></ns2:response></ns2:method></ns2:resource><ns2:resource
+                    path="locCirc"><ns2:method id="sLocCirc"
+                            name="GET"><ns2:doc><![CDATA[Finding locations located within a geo-spatial circle identified by the geo-graphical coordinates (a pair of latitude and longitude) of its centre and its radius]]></ns2:doc><ns2:request><ns2:param
+                            name="lat1" style="query" type="xs:float"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[The latitude coordinate indicating the centre. Between 0 and 90 degrees. Positive (North) o negative (South)]]></ns2:doc></ns2:param><ns2:param
+                            name="long1" style="query" type="xs:float"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[The longitude coordinate indicating the centre. Between 0 and 180 degrees. Positive (East) o negative (West)]]></ns2:doc></ns2:param><ns2:param
+                            name="radius" style="query" type="xs:float"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[The radio from the centre]]></ns2:doc></ns2:param><ns2:param
+                            name="dataset" style="query"
+                            type="xs:string" default="factforge"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[The dataset in which perform the search. By default Factforge]]></ns2:doc></ns2:param></ns2:request><ns2:response><ns2:doc><![CDATA[A JSON file format with the found venues]]></ns2:doc><ns2:representation
+                mediaType="application/json"/></ns2:response></ns2:method></ns2:resource><ns2:resource
+                    path="locRec"><ns2:method id="sLocRec"
+                            name="GET"><ns2:doc><![CDATA[Finding locations within a geo-spatial rectangle identified by the exact geographical coordinates of its lower-left corner and its upper-right corner]]></ns2:doc><ns2:request><ns2:param
+                            name="lat1" style="query" type="xs:float"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[Between 0 and 90 degrees. Positive (North) o negative (South)]]></ns2:doc></ns2:param><ns2:param
+                            name="long1" style="query" type="xs:float"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[Between 0 and 180 degrees. Positive (East) o negative (West)]]></ns2:doc></ns2:param><ns2:param
+                            name="lat2" style="query" type="xs:float"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[Between 0 and 90 degrees. Positive (North) o negative (South)]]></ns2:doc></ns2:param><ns2:param
+                            name="long2" style="query" type="xs:float"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[Between 0 and 180 degrees. Positive (East) o negative (West)]]></ns2:doc></ns2:param><ns2:param
+                            name="dataset" style="query"
+                            type="xs:string" default="factforge"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"><ns2:doc><![CDATA[The dataset in which perform the search. By default Factforge]]></ns2:doc></ns2:param></ns2:request><ns2:response><ns2:doc><![CDATA[A JSON file format with the found venues]]></ns2:doc><ns2:representation mediaType="application/json"/></ns2:response></ns2:method></ns2:resource></ns2:resource></ns2:resources></ns2:application>

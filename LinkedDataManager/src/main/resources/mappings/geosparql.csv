@@ -1,0 +1,11 @@
+NAME,geosparql
+ENDPOINT,http://geosparql.org/sparql
+PREFIX,geo,http://www.w3.org/2003/01/geo/wgs84_pos#
+PREFIX,gs,http://www.opengis.net/ont/geosparql#
+PREFIX,gn,http://www.geonames.org/ontology#
+LOC,,gn:Feature
+LOCLAT,geo:lat
+LOCLON,geo:long
+RECEX,%LOCPAR% gs:within( %LAT1% %LON1% %LAT2% %LON2% )
+CIRCEX,%LOCPAR% gs:nearby( %LAT1% %LON1% %rad% )
+TIME,xsd:hasDate,xsd:DateTime

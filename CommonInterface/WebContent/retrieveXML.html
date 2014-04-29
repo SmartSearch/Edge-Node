@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>retrieveXML Info</title>
+</head>
+<body>
+<h1>Retrieve XML</h1>
+<b>Description:</b> Get data from feeds in XML format<br/>
+<b>Usage:</b> Send an <b>HTTP GET</b> request to <code>http://servername/CommonInterface/retrieveXML?feed=feed_name</code>, where <b>feed_name</b> is the feed name consisting of lower latin characters, numbers and underscores "_"<br/>
+<b>Additional parameters:</b> The following additional parameters are possible
+<ul>
+	<li><code>limit</code>: limits the results to the latest measurements (default 100)</li>
+	<li><code>start_date</code>: start date/time in <a href="http://www.w3schools.com/schema/schema_dtypes_date.asp">xs:dateTime</a> format or in milliseconds since midnight, 1 January 1970 UTC (UNIX epoch)</li>
+	<li><code>end_date</code>: end date/time in <a href="http://www.w3schools.com/schema/schema_dtypes_date.asp">xs:dateTime</a> format or in milliseconds since midnight, 1 January 1970 UTC (UNIX epoch)</li>
+	<li><code>low_level_events</code>: if this parameter is specified, only low-level events will be shown</li>
+</ul>
+If <code>start_date</code> is specified, you should also specify <code>end_date</code> and vice-versa. Furthermore, the results will be sorted from earliest to latest.<br/>
+
+<h2>Examples:</h2>
+<a href="retrieveXML?feed=aitathens&amp;limit=1"><code>http://servername/CommonInterface/retrieveXML?feed=aitathens&amp;limit=1</code></a> gives the latest reading<br/>
+<a href="retrieveXML?feed=aitathens&amp;start_date=2012-07-26T10:43:22.318Z&amp;end_date=2012-07-26T10:44:22.318Z"><code>http://servername/CommonInterface/retrieveXML?feed=aitathens&amp;start_date=2012-07-26T10:43:22.318Z&amp;end_date=2012-07-26T10:44:22.318Z</code></a> gives readings that occurred within the specified minute<br/>
+<a href="retrieveXML?feed=crowd_analysis_feed&amp;low_level_events&amp;limit=100"><code>http://servername/CommonInterface/retrieveXML?feed=crowd_analysis_feed&amp;low_level_events&amp;limit=100</code></a> see the 100 most recent low-level-events of the crowd analysis feed<br/>
+</body>
+</html>

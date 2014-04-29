@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>TelestoFeed Info</title>
+</head>
+<body>
+<h1>Telesto Feed</h1>
+<b>Description:</b> search available Telesto networks for specified keywords<br/>
+<br/>
+<b>Usage:</b> Send an <b>HTTP GET</b> request to <code>http://servername/CommonInterface/telestoFeed?action=&lt;selected_action&gt;</code> with the required action. <br/>
+<br/>
+<b>selected_action</b> can be one of:<br/>
+<b>list</b>: List the currently active telesto feeds<br/>
+<b>start</b>: Start a new telesto feed<br/>
+<b>stop</b>: Stop a currently running telesto feed<br/>
+<br/>
+Both <b>start</b> and <b>stop</b> actions require the following parameter:<br/>
+<code>server</code> : Name (and port if different than 80) of the telesto server that contains the data<br/>
+<br/>
+Furthermore, the <b>start</b> action can also receive the following optional parameters:<br/> 
+<code>interval</code> : Update frequency in seconds (default 60)<br/>
+<code>feedname</code> : Database of the created feed, default is "temphumfeed"<br/>
+<br/>
+
+<h2>Examples:</h2>
+
+<b>Start reading temperature and humidity values from telesto server 'telesto.zapto.org:81' every 100 seconds and save them as 'temphumfeed' (default)</b><br/>
+<a href="telestoFeed?action=start&server=telesto.zapto.org:81&interval=10"><code>http://servername/CommonInterface/telestoFeed?action=start&amp;server=telesto.zapto.org:81&amp;interval=10</code></a><br/>
+<br/>
+<b>Start reading temperature and humidity values from telesto server 'smaftp.homeftp.org:8080' every minute and save them as feed 'temphum_smaftp_feed'</b><br/>
+<a href="telestoFeed?action=start&server=smaftp.homeftp.org:8080&feedname=temphum_smaftp_feed"><code>http://servername/CommonInterface/telestoFeed?action=start&amp;server=smaftp.homeftp.org:8080&amp;feedname=temphum_smaftp_feed</code></a><br/>
+<br/>
+<b>Stop reading temperature and humidity values from telesto server 'telesto.zapto.org:81'</b><br/>
+<a href="telestoFeed?action=stop&server=telesto.zapto.org:81"><code>http://servername/CommonInterface/telestoFeed?action=stop&amp;server=telesto.zapto.org:81</code></a><br/>
+<br/>
+<b>List currently running feeds from telesto servers</b><br/>
+<a href="telestoFeed?action=list"><code>http://servername/CommonInterface/telestoFeed?action=list</code></a><br/>
+<br/>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>CreateFeed Info</title>
+	<script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+	<script type="text/javascript" src="js/syntaxhighlighter_3.0.83/scripts/shBrushXml.js"></script>
+	<link type="text/css" rel="stylesheet" href="js/syntaxhighlighter_3.0.83/styles/shCoreDefault.css"/>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+<body>
+<h1>Create Feed</h1>
+<b>Description:</b> Create a new feed<br/>
+<b>Usage:</b> Send an <b>HTTP POST</b> request to <code>http://servername/CommonInterface/createFeed</code> with the required XML in the body and <code>"Content-Type: application/xml"</code> in the header. A tool for easy testing in <a href="http://www.firefox.com/">Firefox</a> is <a href="https://addons.mozilla.org/en-US/firefox/addon/restclient/">RESTClient</a><br/>
+The xml should be valid according to <a href="SMART_Datafeed_Schema_v0.3.xsd">this XSD</a><br/>
+<br/>
+If everything works ok, you will get a <code>201 Created</code> response code<br/><br/>
+Otherwise you will receive one of the following error codes:
+<ul>
+	<li><code>400 Bad Request</code>: Your XML is not valid, check the response body for a description<br/></li>
+	<li><code>500 Internal Server Error</code>: Some error occured on the server, if it insists please contact us<br/></li>
+</ul>
+Details about the XML to send can be found in <b>"D3.1 Sensors and multimedia data knowledge representation"</b>.<br/>
+A sample XML to input is the following, please change the <b>&lt;Id&gt;</b> to the name you would like for your feed:<br/>
+<pre class='brush: xml'>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;Feed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="SMART_Datafeed_Schema_v0.3.xsd"&gt;
+	&lt;Id&gt;mytestfeed&lt;/Id&gt;
+	&lt;Type&gt;Physical&lt;/Type&gt;
+	&lt;Title&gt;Temperature and Humididty Sensor Feed&lt;/Title&gt;
+	&lt;Description&gt;The feed contains an ARDUINO DUEMILANOVE,
+	an LM335A Temperature Sensor and a Relative Humidity Sensor &lt;/Description&gt;
+	&lt;DescriptionTags&gt;
+		&lt;TextTags&gt;Temperature Humidity Arduino&lt;/TextTags&gt;
+		&lt;URITags&gt;smartfp7:temperature smartfp7:humidity&lt;/URITags&gt;
+	&lt;/DescriptionTags&gt;
+	&lt;ContactInfo&gt;
+		&lt;ContactEmail&gt;a@b.c&lt;/ContactEmail&gt;
+	&lt;/ContactInfo&gt;
+	&lt;Components&gt;
+		&lt;Physical&gt;
+			&lt;Name&gt;temperature_sensor&lt;/Name&gt;
+			&lt;Description&gt;LM335A Temperature Sensor&lt;/Description&gt;
+			&lt;DescriptionTags&gt;
+				&lt;TextTags&gt;Temperature Sensor Arduino&lt;/TextTags&gt;
+				&lt;URITags&gt;smartfp7:temperature&lt;/URITags&gt;
+			&lt;/DescriptionTags&gt;
+			&lt;Geolocation&gt;
+				&lt;Longitude&gt;-139.8&lt;/Longitude&gt;
+				&lt;Latitude&gt;41.8&lt;/Latitude&gt;
+			&lt;/Geolocation&gt;
+			&lt;Type&gt;Thermometer&lt;/Type&gt;
+			&lt;Exposure&gt;Indoor&lt;/Exposure&gt;
+			&lt;Disposition&gt;Fixed&lt;/Disposition&gt;
+			&lt;Efficiency&gt;0.80&lt;/Efficiency&gt;
+		&lt;/Physical&gt;
+		&lt;Physical&gt;
+			&lt;Name&gt;humidity_sensor&lt;/Name&gt;
+			&lt;Description&gt;Relative Humidity Sensor&lt;/Description&gt;
+			&lt;DescriptionTags&gt;
+				&lt;TextTags&gt;Humidity Sensor Arduino&lt;/TextTags&gt;
+				&lt;URITags&gt;smartfp7:humidity&lt;/URITags&gt;
+			&lt;/DescriptionTags&gt;
+			&lt;Geolocation&gt;
+				&lt;Longitude&gt;-139.8&lt;/Longitude&gt;
+				&lt;Latitude&gt;41.8&lt;/Latitude&gt;
+			&lt;/Geolocation&gt;
+			&lt;Type&gt;Humidity&lt;/Type&gt;
+			&lt;Exposure&gt;Indoor&lt;/Exposure&gt;
+			&lt;Disposition&gt;Fixed&lt;/Disposition&gt;
+			&lt;Efficiency&gt;0.90&lt;/Efficiency&gt;
+		&lt;/Physical&gt;
+	&lt;/Components&gt;
+	&lt;Outputs&gt;
+		&lt;Output&gt;
+			&lt;Name&gt;temperature&lt;/Name&gt;
+			&lt;ProducedBy&gt;temperature_sensor&lt;/ProducedBy&gt;
+			&lt;Description&gt;Temperature Reading&lt;/Description&gt;
+			&lt;DescriptionTags&gt;
+				&lt;TextTags&gt;Temperature Output Arduino&lt;/TextTags&gt;
+				&lt;URITags&gt;smartfp7:temperature&lt;/URITags&gt;
+			&lt;/DescriptionTags&gt;
+			&lt;Type&gt;double&lt;/Type&gt;
+			&lt;Unit&gt;Celcius degrees&lt;/Unit&gt;
+			&lt;HasConfidence&gt;false&lt;/HasConfidence&gt;
+		&lt;/Output&gt;
+		&lt;Output&gt;
+			&lt;Name&gt;humidity&lt;/Name&gt;
+			&lt;ProducedBy&gt;humidity_sensor&lt;/ProducedBy&gt;
+			&lt;Description&gt;Relative Humidity Reading&lt;/Description&gt;
+			&lt;DescriptionTags&gt;
+				&lt;TextTags&gt;Humidity Output Arduino&lt;/TextTags&gt;
+				&lt;URITags&gt;smartfp7:humidity&lt;/URITags&gt;
+			&lt;/DescriptionTags&gt;
+			&lt;Type&gt;double&lt;/Type&gt;
+			&lt;HasConfidence&gt;false&lt;/HasConfidence&gt;
+		&lt;/Output&gt;
+	&lt;/Outputs&gt;
+&lt;/Feed&gt; 
+</pre>
+
+</body>
+</html>

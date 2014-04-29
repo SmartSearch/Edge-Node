@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>List feeds Info</title>
+</head>
+<body>
+<h1>List feeds</h1>
+<b>Description:</b> List of feeds in JSON format<br/><b>Usage:</b> Send an <b>HTTP GET</b> request to <a href="http://dusk.ait.gr/couchdb/feeds/_all_docs"><code>http://servername/couchdb/feeds/_all_docs</code></a> to get the list of feeds in JSON format<br/>
+Alternatively, you can use the following to get a streaming list of the feeds<br/>
+<a href="http://dusk.ait.gr/couchdb/feeds/_changes?feed=continuous"><code>http://servername/couchdb/feeds/_changes?feed=continuous</code></a><br/>
+<h2>Notes</h2>
+<ul>
+	<li>The continuous mode returns one JSON document per feed, while <code>_all_docs</code> returns one JSON document with the results in a JSON array.</li>
+	<li>If you also want the complete feed description in JSON format, you can add the parameter <code>include_docs=true</code>, e.g. <a href="http://dusk.ait.gr/couchdb/feeds/_changes?feed=continuous&amp;include_docs=true"><code>http://servername/couchdb/feeds/_changes?feed=continuous&amp;include_docs=true</code></a></li>
+	<li>If you use the streaming links from a browser, it may not show results unless there is sufficient data. You may try to click the link again or choose the version including the docs</li>
+</ul>
+</body>
+</html>

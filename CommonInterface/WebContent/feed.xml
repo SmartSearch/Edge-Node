@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Feed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="SMART_Datafeed_Schema_v0.3.xsd">
+	<Id>edgenodeName:audiocrowdfeed</Id>
+	<Type>Mixed</Type>
+	<Title>Audio and Video processing Feed</Title>
+	<Description>The feed represents a simple sound level meter and a more elaborate crowd analysis component from camera </Description>
+	<DescriptionTags>
+		<TextTags>sound camera</TextTags>
+		<URITags>smartfp7:audio smartfp7:video smarfp7:crowd</URITags>
+	</DescriptionTags>
+	<ContactInfo>
+		<ContactEmail>a@b.c</ContactEmail>
+	</ContactInfo>
+	<Components>
+		<Physical>
+			<Name>microphone</Name>
+			<Description>Microphone used for applause detection</Description>
+			<DescriptionTags>
+				<TextTags>sound</TextTags>
+				<URITags>smartfp7:audio</URITags>
+			</DescriptionTags>
+			<Geolocation>
+				<Longitude>-139.8</Longitude>
+				<Latitude>41.8</Latitude>
+			</Geolocation>
+			<Type>sound</Type>
+			<Exposure>Outdoor</Exposure>
+			<Disposition>Fixed</Disposition>
+			<Efficiency>0.90</Efficiency>
+		</Physical>
+		<Physical>
+			<Name>camera</Name>
+			<Description>AXIS camera providing video to activity_detection and crowd_analysis virtual feeds</Description>
+			<DescriptionTags>
+				<TextTags>camera</TextTags>
+				<URITags>smartfp7:camera</URITags>
+			</DescriptionTags>
+			<Geolocation>
+				<Longitude>-139.823</Longitude>
+				<Latitude>41.812</Latitude>
+			</Geolocation>
+			<Type>camera</Type>
+			<Exposure>Outdoor</Exposure>
+			<Disposition>Fixed</Disposition>
+		</Physical>
+		<Virtual>
+			<Name>activity_detection</Name>
+			<Description>Activity detection</Description>
+			<DescriptionTags>
+				<URITags>smartfp7:activity</URITags>
+			</DescriptionTags>
+			<Type>activity</Type>
+		</Virtual>
+		<Virtual>
+			<Name>crowd_analysis</Name>
+			<Description>Crowd analysis component</Description>
+			<DescriptionTags>
+				<URITags>smartfp7:crowd</URITags>
+			</DescriptionTags>
+			<Type>crowd</Type>
+		</Virtual>
+		<Virtual>
+			<Name>applause_detection</Name>
+			<Description>Detect applause</Description>
+			<DescriptionTags>
+				<URITags>smartfp7:audio</URITags>
+			</DescriptionTags>
+			<Type>audio</Type>
+		</Virtual>
+	</Components>
+	<Outputs>
+		<Output>
+			<Name>name</Name>
+			<ProducedBy>activity_detection</ProducedBy>
+			<Description>Hash tag</Description>
+			<DescriptionTags>
+				<URITags>smartfp7:activity</URITags>
+			</DescriptionTags>
+			<Type>string</Type>
+			<HasConfidence>false</HasConfidence>
+		</Output>
+		<Output>
+			<Name>is_active</Name>
+			<ProducedBy>activity_detection</ProducedBy>
+			<Description>Whether an activity happens</Description>
+			<DescriptionTags>
+				<URITags>smartfp7:activity</URITags>
+			</DescriptionTags>
+			<Type>boolean</Type>
+			<HasConfidence>false</HasConfidence>
+		</Output>
+		<Output>
+			<Name>date</Name>
+			<ProducedBy>activity_detection</ProducedBy>
+			<Description>Date of an activity</Description>
+			<DescriptionTags>
+				<URITags>smartfp7:activity</URITags>
+			</DescriptionTags>
+			<Type>string</Type>
+			<HasConfidence>false</HasConfidence>
+		</Output>
+		<Output>
+			<Name>temporal_hint</Name>
+			<ProducedBy>activity_detection</ProducedBy>
+			<Description>Time instances of an activity</Description>
+			<DescriptionTags>
+				<URITags>smartfp7:activity</URITags>
+			</DescriptionTags>
+			<Type>array(string)</Type>
+			<HasConfidence>false</HasConfidence>
+		</Output>
+		<Output>
+			<Name>density</Name>
+			<ProducedBy>crowd_analysis</ProducedBy>
+			<Description>Crowd density</Description>
+			<DescriptionTags>
+				<URITags>smartfp7:crowd</URITags>
+			</DescriptionTags>
+			<Type>double</Type>
+			<HasConfidence>false</HasConfidence>
+		</Output>
+		<Output>
+			<Name>status</Name>
+			<ProducedBy>crowd_analysis</ProducedBy>
+			<Description>Crowd density</Description>
+			<DescriptionTags>
+				<URITags>smartfp7:crowd</URITags>
+			</DescriptionTags>
+			<Type>integer</Type>
+			<HasConfidence>false</HasConfidence>
+		</Output>
+		<Output>
+			<Name>motion_horizontal</Name>
+			<ProducedBy>crowd_analysis</ProducedBy>
+			<Description>motion on the horizontal axis</Description>
+			<DescriptionTags>
+				<URITags>smartfp7:crowd</URITags>
+			</DescriptionTags>
+			<Type>integer</Type>
+			<HasConfidence>false</HasConfidence>
+		</Output>
+		<Output>
+			<Name>motion_vertical</Name>
+			<ProducedBy>crowd_analysis</ProducedBy>
+			<Description>motion on the vertical axis</Description>
+			<DescriptionTags>
+				<URITags>smartfp7:crowd</URITags>
+			</DescriptionTags>
+			<Type>integer</Type>
+			<HasConfidence>false</HasConfidence>
+		</Output>
+		<Output>
+			<Name>motion_spread</Name>
+			<ProducedBy>crowd_analysis</ProducedBy>
+			<Description>spread of the motion</Description>
+			<DescriptionTags>
+				<URITags>smartfp7:crowd</URITags>
+			</DescriptionTags>
+			<Type>integer</Type>
+			<HasConfidence>false</HasConfidence>
+		</Output>
+		<Output>
+			<Name>color</Name>
+			<ProducedBy>crowd_analysis</ProducedBy>
+			<Description>The most prominent colours, listed as XXXX.YYY, where XXXX is the colour number encoded as RR*256^2 + GG*256 + BB and YYY is the percentage of that colour in the image</Description>
+			<DescriptionTags>
+				<URITags>smartfp7:colour</URITags>
+			</DescriptionTags>
+			<Type>array(double)</Type>
+			<HasConfidence>false</HasConfidence>
+		</Output>
+		<Output>
+			<Name>applause</Name>
+			<ProducedBy>applause_detection</ProducedBy>
+			<Description>Detect applause</Description>
+			<DescriptionTags>
+				<URITags>smartfp7:audio</URITags>
+			</DescriptionTags>
+			<Type>integer</Type>
+			<HasConfidence>false</HasConfidence>
+		</Output>
+	</Outputs>
+</Feed> 

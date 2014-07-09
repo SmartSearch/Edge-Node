@@ -176,6 +176,7 @@ def create_video(beginTime,endTime,event_id, conf):
         return
 
     file_out = open(conf["tmp_file"],"wb")
+    #error: the tmp file must be different for each thread
     
     for i in cursor:
         logging.debug("recoved seq {} stamp {}".format(i["seq"],i["stamp"]))

@@ -1,0 +1,30 @@
+//predicate declarations
+status = {Low,  High}
+value1 = {Low,  High}
+value2 = {Low,  High}
+value3 = {Low,  High}
+value4 = {Low,  High}
+value5 = {Low,  High}
+// oneHourFrequencyValue = {Low, Medium, High}
+roi = {AIT}
+featureOfInterest = {Livemusic}
+
+TemperatureValue(roi, value1)
+ApplauseScoreValue(roi, value2)
+OnehourFrequencyValue(featureOfInterest, value3)
+CrowdDensityValue(roi, value4)
+notification(roi, value5)
+
+// Rules to weight
+// TemperatureValue(r, +temp), OnehourFrequencyValue(+featureOfInterest, +frequency)  => Density(r, Low)
+!TemperatureValue(r, +value11) v !ApplauseScoreValue(r, +value22)  v !OnehourFrequencyValue(+featureOfInterestvar, +value33) v !CrowdDensityValue(r, +value44) v notification(r, +value55)
+
+// TemperatureValue(r, +temp), !OnehourFrequencyValue(+featureOfInterest, +frequency) => Density(r, High)
+//!TemperatureValue(r, +value) v !OnehourFrequencyValue(+featureOfInterestvar, +value) v Density(r, High)
+
+
+// TemperatureValue(r, +temp), !OnehourFrequencyValue(+featureOfInterest, +frequency) => Density(r, Medium)
+//!TemperatureValue(r, +value) v !OnehourFrequencyValue(+featureOfInterestvar, +value) v Density(r, Medium)
+
+#include ""
+

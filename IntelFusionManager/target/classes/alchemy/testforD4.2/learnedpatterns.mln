@@ -1,0 +1,118 @@
+//predicate declarations
+TemperatureValue(roi,value1)
+ApplauseScoreValue(roi,value2)
+OnehourFrequencyValue(featureOfInterest,value3)
+CrowdDensityValue(roi,value4)
+notification(roi,value5)
+
+// 0       !TemperatureValue(r,Low) v !ApplauseScoreValue(r,Low) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(r,Low) v notification(r,Low)
+0       !TemperatureValue(a1,Low) v !ApplauseScoreValue(a1,Low) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(a1,Low) v notification(a1,Low)
+
+// 0       !TemperatureValue(r,Low) v !ApplauseScoreValue(r,Low) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(r,Low) v notification(r,High)
+0       !TemperatureValue(a1,Low) v !ApplauseScoreValue(a1,Low) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(a1,Low) v notification(a1,High)
+
+// 0       !TemperatureValue(r,Low) v !ApplauseScoreValue(r,Low) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(r,High) v notification(r,Low)
+0       !TemperatureValue(a1,Low) v !ApplauseScoreValue(a1,Low) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(a1,High) v notification(a1,Low)
+
+// 0       !TemperatureValue(r,Low) v !ApplauseScoreValue(r,Low) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(r,High) v notification(r,High)
+0       !TemperatureValue(a1,Low) v !ApplauseScoreValue(a1,Low) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(a1,High) v notification(a1,High)
+
+// 0       !TemperatureValue(r,Low) v !ApplauseScoreValue(r,Low) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(r,Low) v notification(r,Low)
+0       !TemperatureValue(a1,Low) v !ApplauseScoreValue(a1,Low) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(a1,Low) v notification(a1,Low)
+
+// 0       !TemperatureValue(r,Low) v !ApplauseScoreValue(r,Low) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(r,Low) v notification(r,High)
+0       !TemperatureValue(a1,Low) v !ApplauseScoreValue(a1,Low) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(a1,Low) v notification(a1,High)
+
+// 4.53016  !TemperatureValue(r,Low) v !ApplauseScoreValue(r,Low) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(r,High) v notification(r,Low)
+4.53016  !TemperatureValue(a1,Low) v !ApplauseScoreValue(a1,Low) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(a1,High) v notification(a1,Low)
+
+// 0       !TemperatureValue(r,Low) v !ApplauseScoreValue(r,Low) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(r,High) v notification(r,High)
+0       !TemperatureValue(a1,Low) v !ApplauseScoreValue(a1,Low) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(a1,High) v notification(a1,High)
+
+// 0       !TemperatureValue(r,Low) v !ApplauseScoreValue(r,High) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(r,Low) v notification(r,Low)
+0       !TemperatureValue(a1,Low) v !ApplauseScoreValue(a1,High) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(a1,Low) v notification(a1,Low)
+
+// 0       !TemperatureValue(r,Low) v !ApplauseScoreValue(r,High) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(r,Low) v notification(r,High)
+0       !TemperatureValue(a1,Low) v !ApplauseScoreValue(a1,High) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(a1,Low) v notification(a1,High)
+
+// 4.53016  !TemperatureValue(r,Low) v !ApplauseScoreValue(r,High) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(r,High) v notification(r,Low)
+4.53016  !TemperatureValue(a1,Low) v !ApplauseScoreValue(a1,High) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(a1,High) v notification(a1,Low)
+
+// 0       !TemperatureValue(r,Low) v !ApplauseScoreValue(r,High) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(r,High) v notification(r,High)
+0       !TemperatureValue(a1,Low) v !ApplauseScoreValue(a1,High) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(a1,High) v notification(a1,High)
+
+// 4.53016  !TemperatureValue(r,Low) v !ApplauseScoreValue(r,High) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(r,Low) v notification(r,Low)
+4.53016  !TemperatureValue(a1,Low) v !ApplauseScoreValue(a1,High) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(a1,Low) v notification(a1,Low)
+
+// 0       !TemperatureValue(r,Low) v !ApplauseScoreValue(r,High) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(r,Low) v notification(r,High)
+0       !TemperatureValue(a1,Low) v !ApplauseScoreValue(a1,High) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(a1,Low) v notification(a1,High)
+
+// -10.2725  !TemperatureValue(r,Low) v !ApplauseScoreValue(r,High) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(r,High) v notification(r,Low)
+-10.2725  !TemperatureValue(a1,Low) v !ApplauseScoreValue(a1,High) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(a1,High) v notification(a1,Low)
+
+// 4.53016  !TemperatureValue(r,Low) v !ApplauseScoreValue(r,High) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(r,High) v notification(r,High)
+4.53016  !TemperatureValue(a1,Low) v !ApplauseScoreValue(a1,High) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(a1,High) v notification(a1,High)
+
+// 0       !TemperatureValue(r,High) v !ApplauseScoreValue(r,Low) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(r,Low) v notification(r,Low)
+0       !TemperatureValue(a1,High) v !ApplauseScoreValue(a1,Low) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(a1,Low) v notification(a1,Low)
+
+// 0       !TemperatureValue(r,High) v !ApplauseScoreValue(r,Low) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(r,Low) v notification(r,High)
+0       !TemperatureValue(a1,High) v !ApplauseScoreValue(a1,Low) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(a1,Low) v notification(a1,High)
+
+// 0       !TemperatureValue(r,High) v !ApplauseScoreValue(r,Low) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(r,High) v notification(r,Low)
+0       !TemperatureValue(a1,High) v !ApplauseScoreValue(a1,Low) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(a1,High) v notification(a1,Low)
+
+// 0       !TemperatureValue(r,High) v !ApplauseScoreValue(r,Low) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(r,High) v notification(r,High)
+0       !TemperatureValue(a1,High) v !ApplauseScoreValue(a1,Low) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(a1,High) v notification(a1,High)
+
+// 0       !TemperatureValue(r,High) v !ApplauseScoreValue(r,Low) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(r,Low) v notification(r,Low)
+0       !TemperatureValue(a1,High) v !ApplauseScoreValue(a1,Low) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(a1,Low) v notification(a1,Low)
+
+// 0       !TemperatureValue(r,High) v !ApplauseScoreValue(r,Low) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(r,Low) v notification(r,High)
+0       !TemperatureValue(a1,High) v !ApplauseScoreValue(a1,Low) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(a1,Low) v notification(a1,High)
+
+// 0       !TemperatureValue(r,High) v !ApplauseScoreValue(r,Low) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(r,High) v notification(r,Low)
+0       !TemperatureValue(a1,High) v !ApplauseScoreValue(a1,Low) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(a1,High) v notification(a1,Low)
+
+// 0       !TemperatureValue(r,High) v !ApplauseScoreValue(r,Low) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(r,High) v notification(r,High)
+0       !TemperatureValue(a1,High) v !ApplauseScoreValue(a1,Low) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(a1,High) v notification(a1,High)
+
+// 0       !TemperatureValue(r,High) v !ApplauseScoreValue(r,High) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(r,Low) v notification(r,Low)
+0       !TemperatureValue(a1,High) v !ApplauseScoreValue(a1,High) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(a1,Low) v notification(a1,Low)
+
+// 0       !TemperatureValue(r,High) v !ApplauseScoreValue(r,High) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(r,Low) v notification(r,High)
+0       !TemperatureValue(a1,High) v !ApplauseScoreValue(a1,High) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(a1,Low) v notification(a1,High)
+
+// 0       !TemperatureValue(r,High) v !ApplauseScoreValue(r,High) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(r,High) v notification(r,Low)
+0       !TemperatureValue(a1,High) v !ApplauseScoreValue(a1,High) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(a1,High) v notification(a1,Low)
+
+// 0       !TemperatureValue(r,High) v !ApplauseScoreValue(r,High) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(r,High) v notification(r,High)
+0       !TemperatureValue(a1,High) v !ApplauseScoreValue(a1,High) v !OnehourFrequencyValue(Livemusic,Low) v !CrowdDensityValue(a1,High) v notification(a1,High)
+
+// 0       !TemperatureValue(r,High) v !ApplauseScoreValue(r,High) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(r,Low) v notification(r,Low)
+0       !TemperatureValue(a1,High) v !ApplauseScoreValue(a1,High) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(a1,Low) v notification(a1,Low)
+
+// 0       !TemperatureValue(r,High) v !ApplauseScoreValue(r,High) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(r,Low) v notification(r,High)
+0       !TemperatureValue(a1,High) v !ApplauseScoreValue(a1,High) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(a1,Low) v notification(a1,High)
+
+// 4.53016  !TemperatureValue(r,High) v !ApplauseScoreValue(r,High) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(r,High) v notification(r,Low)
+4.53016  !TemperatureValue(a1,High) v !ApplauseScoreValue(a1,High) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(a1,High) v notification(a1,Low)
+
+// 0       !TemperatureValue(r,High) v !ApplauseScoreValue(r,High) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(r,High) v notification(r,High)
+0       !TemperatureValue(a1,High) v !ApplauseScoreValue(a1,High) v !OnehourFrequencyValue(Livemusic,High) v !CrowdDensityValue(a1,High) v notification(a1,High)
+
+// -2.47566  TemperatureValue(a1,a2)
+-2.47566  TemperatureValue(a1,a2)
+
+// -2.47566  ApplauseScoreValue(a1,a2)
+-2.47566  ApplauseScoreValue(a1,a2)
+
+// -2.47566  OnehourFrequencyValue(a1,a2)
+-2.47566  OnehourFrequencyValue(a1,a2)
+
+// -2.47566  CrowdDensityValue(a1,a2)
+-2.47566  CrowdDensityValue(a1,a2)
+
+// 2.47566  notification(a1,a2)
+2.47566  notification(a1,a2)
+

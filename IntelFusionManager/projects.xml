@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><Feed><Id>reasoning_feed_imperial</Id><Type>Virtual</Type><Title>reasoning_feed_imperial</Title><Description>Notification regarding the type of an event</Description><Outputs><Output><Name>event</Name><ProducedBy>alchemy_reasoner</ProducedBy><Type>double</Type><HasConfidence>true</HasConfidence></Output></Outputs></Feed>

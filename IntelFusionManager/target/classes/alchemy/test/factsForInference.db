@@ -1,0 +1,31 @@
+// owl:InstanceOf(smart-fp7:tweetObservation123, smart-fp7:TweetObservation)
+// smart-fp7:Location(smart-fp7:tweetObservation123, dbpedia:Santander)
+// ssn:FeatureOfInterest(smart-fp7:tweetObservation123, dbpedia:sun)
+// owl:InstanceOf(dbpedia:sun, ssn:FeatureOfInterest)
+// ssn:observationResult(smart-fp7:tweetObservation123, smart-fp7:tweetSensorOutput123)
+// ssn:hasValue(smart-fp7:tweetSensorOutput123,smart-fp7:OnehourFrequencyValue)
+// smart-fp7:hasQuantityValue(smart-fp7:OnehourFrequencyValue,100)
+// 
+// -------------------------------------------
+// - after Jena query/construct:
+// -------------------------------------------
+// 
+// smart-fp7:OnehourFrequencyValue(dbpedia:sun, 100)
+// 
+// 
+// ------------------------------------------
+// - For alchmey
+// -----------------------------------------
+
+TemperatureValue(AIT, High)
+ApplauseScoreValue(AIT, Low)
+OnehourFrequencyValue(Livemusic, Low)
+CrowdDensityValue(AIT, High)
+
+// ---------------------------------------
+
+
+
+
+
+

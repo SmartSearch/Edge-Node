@@ -1,0 +1,316 @@
+//predicate declarations
+Density(roi,status!)
+Temperature(roi,tempvalue)
+
+// 5.80544  !Temperature(r,C@tempvalue@0) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,0)
+
+// 5.80544  !Temperature(r,C@tempvalue@1) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,1)
+
+// 5.80544  !Temperature(r,C@tempvalue@2) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,2)
+
+// 5.80544  !Temperature(r,C@tempvalue@3) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,3)
+
+// 5.80544  !Temperature(r,C@tempvalue@4) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,4)
+
+// 5.80544  !Temperature(r,C@tempvalue@5) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,5)
+
+// 5.80544  !Temperature(r,C@tempvalue@6) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,6)
+
+// 5.80544  !Temperature(r,C@tempvalue@7) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,7)
+
+// 5.80544  !Temperature(r,C@tempvalue@8) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,8)
+
+// 5.80544  !Temperature(r,C@tempvalue@9) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,9)
+
+// 5.80544  !Temperature(r,C@tempvalue@10) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,10)
+
+// 0.267918  !Temperature(r,C@tempvalue@11) v Density(r,Low)
+0.267918  Density(a1,Low) v !Temperature(a1,11)
+
+// 0.267918  !Temperature(r,C@tempvalue@12) v Density(r,Low)
+0.267918  Density(a1,Low) v !Temperature(a1,12)
+
+// 0.267918  !Temperature(r,C@tempvalue@13) v Density(r,Low)
+0.267918  Density(a1,Low) v !Temperature(a1,13)
+
+// 0.267918  !Temperature(r,C@tempvalue@14) v Density(r,Low)
+0.267918  Density(a1,Low) v !Temperature(a1,14)
+
+// 0.267918  !Temperature(r,C@tempvalue@15) v Density(r,Low)
+0.267918  Density(a1,Low) v !Temperature(a1,15)
+
+// 0.267918  !Temperature(r,C@tempvalue@16) v Density(r,Low)
+0.267918  Density(a1,Low) v !Temperature(a1,16)
+
+// -0.94953  !Temperature(r,C@tempvalue@17) v Density(r,Low)
+-0.94953  Density(a1,Low) v !Temperature(a1,17)
+
+// -6.31198  !Temperature(r,C@tempvalue@18) v Density(r,Low)
+-6.31198  Density(a1,Low) v !Temperature(a1,18)
+
+// -6.31198  !Temperature(r,C@tempvalue@19) v Density(r,Low)
+-6.31198  Density(a1,Low) v !Temperature(a1,19)
+
+// -6.31198  !Temperature(r,C@tempvalue@20) v Density(r,Low)
+-6.31198  Density(a1,Low) v !Temperature(a1,20)
+
+// -6.31198  !Temperature(r,C@tempvalue@21) v Density(r,Low)
+-6.31198  Density(a1,Low) v !Temperature(a1,21)
+
+// -6.31198  !Temperature(r,C@tempvalue@22) v Density(r,Low)
+-6.31198  Density(a1,Low) v !Temperature(a1,22)
+
+// -6.31198  !Temperature(r,C@tempvalue@23) v Density(r,Low)
+-6.31198  Density(a1,Low) v !Temperature(a1,23)
+
+// -0.954872  !Temperature(r,C@tempvalue@24) v Density(r,Low)
+-0.954872  Density(a1,Low) v !Temperature(a1,24)
+
+// -0.954872  !Temperature(r,C@tempvalue@25) v Density(r,Low)
+-0.954872  Density(a1,Low) v !Temperature(a1,25)
+
+// -0.954872  !Temperature(r,C@tempvalue@26) v Density(r,Low)
+-0.954872  Density(a1,Low) v !Temperature(a1,26)
+
+// -6.31198  !Temperature(r,C@tempvalue@27) v Density(r,Low)
+-6.31198  Density(a1,Low) v !Temperature(a1,27)
+
+// -6.31198  !Temperature(r,C@tempvalue@28) v Density(r,Low)
+-6.31198  Density(a1,Low) v !Temperature(a1,28)
+
+// -6.31198  !Temperature(r,C@tempvalue@29) v Density(r,Low)
+-6.31198  Density(a1,Low) v !Temperature(a1,29)
+
+// 5.80544  !Temperature(r,C@tempvalue@30) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,30)
+
+// 5.80544  !Temperature(r,C@tempvalue@31) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,31)
+
+// 5.80544  !Temperature(r,C@tempvalue@32) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,32)
+
+// 5.80544  !Temperature(r,C@tempvalue@33) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,33)
+
+// 5.52771  !Temperature(r,C@tempvalue@34) v Density(r,Low)
+5.52771  Density(a1,Low) v !Temperature(a1,34)
+
+// 5.80544  !Temperature(r,C@tempvalue@35) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,35)
+
+// 5.80544  !Temperature(r,C@tempvalue@36) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,36)
+
+// 5.80544  !Temperature(r,C@tempvalue@37) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,37)
+
+// 5.80544  !Temperature(r,C@tempvalue@38) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,38)
+
+// 5.80544  !Temperature(r,C@tempvalue@39) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,39)
+
+// 5.80544  !Temperature(r,C@tempvalue@40) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,40)
+
+// 5.80544  !Temperature(r,C@tempvalue@41) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,41)
+
+// 5.80544  !Temperature(r,C@tempvalue@42) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,42)
+
+// 5.80544  !Temperature(r,C@tempvalue@43) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,43)
+
+// 5.80544  !Temperature(r,C@tempvalue@44) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,44)
+
+// 5.80544  !Temperature(r,C@tempvalue@45) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,45)
+
+// 5.80544  !Temperature(r,C@tempvalue@46) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,46)
+
+// 5.80544  !Temperature(r,C@tempvalue@47) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,47)
+
+// 5.80544  !Temperature(r,C@tempvalue@48) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,48)
+
+// 5.80544  !Temperature(r,C@tempvalue@49) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,49)
+
+// 5.80544  !Temperature(r,C@tempvalue@50) v Density(r,Low)
+5.80544  Density(a1,Low) v !Temperature(a1,50)
+
+// -5.3617  !Temperature(r,C@tempvalue@0) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,0)
+
+// -5.3617  !Temperature(r,C@tempvalue@1) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,1)
+
+// -5.3617  !Temperature(r,C@tempvalue@2) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,2)
+
+// -5.3617  !Temperature(r,C@tempvalue@3) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,3)
+
+// -5.3617  !Temperature(r,C@tempvalue@4) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,4)
+
+// -5.3617  !Temperature(r,C@tempvalue@5) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,5)
+
+// -5.3617  !Temperature(r,C@tempvalue@6) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,6)
+
+// -5.3617  !Temperature(r,C@tempvalue@7) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,7)
+
+// -5.3617  !Temperature(r,C@tempvalue@8) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,8)
+
+// -5.3617  !Temperature(r,C@tempvalue@9) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,9)
+
+// -5.3617  !Temperature(r,C@tempvalue@10) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,10)
+
+// 0.718174  !Temperature(r,C@tempvalue@11) v Density(r,High)
+0.718174  Density(a1,High) v !Temperature(a1,11)
+
+// 0.718174  !Temperature(r,C@tempvalue@12) v Density(r,High)
+0.718174  Density(a1,High) v !Temperature(a1,12)
+
+// 0.718174  !Temperature(r,C@tempvalue@13) v Density(r,High)
+0.718174  Density(a1,High) v !Temperature(a1,13)
+
+// 0.718174  !Temperature(r,C@tempvalue@14) v Density(r,High)
+0.718174  Density(a1,High) v !Temperature(a1,14)
+
+// 0.718174  !Temperature(r,C@tempvalue@15) v Density(r,High)
+0.718174  Density(a1,High) v !Temperature(a1,15)
+
+// 0.718174  !Temperature(r,C@tempvalue@16) v Density(r,High)
+0.718174  Density(a1,High) v !Temperature(a1,16)
+
+// -1.04072  !Temperature(r,C@tempvalue@17) v Density(r,High)
+-1.04072  Density(a1,High) v !Temperature(a1,17)
+
+// 5.99164  !Temperature(r,C@tempvalue@18) v Density(r,High)
+5.99164  Density(a1,High) v !Temperature(a1,18)
+
+// 5.99164  !Temperature(r,C@tempvalue@19) v Density(r,High)
+5.99164  Density(a1,High) v !Temperature(a1,19)
+
+// 5.99164  !Temperature(r,C@tempvalue@20) v Density(r,High)
+5.99164  Density(a1,High) v !Temperature(a1,20)
+
+// 5.99164  !Temperature(r,C@tempvalue@21) v Density(r,High)
+5.99164  Density(a1,High) v !Temperature(a1,21)
+
+// 5.99164  !Temperature(r,C@tempvalue@22) v Density(r,High)
+5.99164  Density(a1,High) v !Temperature(a1,22)
+
+// 5.99164  !Temperature(r,C@tempvalue@23) v Density(r,High)
+5.99164  Density(a1,High) v !Temperature(a1,23)
+
+// -0.955302  !Temperature(r,C@tempvalue@24) v Density(r,High)
+-0.955302  Density(a1,High) v !Temperature(a1,24)
+
+// -0.955302  !Temperature(r,C@tempvalue@25) v Density(r,High)
+-0.955302  Density(a1,High) v !Temperature(a1,25)
+
+// -0.955302  !Temperature(r,C@tempvalue@26) v Density(r,High)
+-0.955302  Density(a1,High) v !Temperature(a1,26)
+
+// 5.99164  !Temperature(r,C@tempvalue@27) v Density(r,High)
+5.99164  Density(a1,High) v !Temperature(a1,27)
+
+// 5.99164  !Temperature(r,C@tempvalue@28) v Density(r,High)
+5.99164  Density(a1,High) v !Temperature(a1,28)
+
+// 5.99164  !Temperature(r,C@tempvalue@29) v Density(r,High)
+5.99164  Density(a1,High) v !Temperature(a1,29)
+
+// -5.3617  !Temperature(r,C@tempvalue@30) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,30)
+
+// -5.3617  !Temperature(r,C@tempvalue@31) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,31)
+
+// -5.3617  !Temperature(r,C@tempvalue@32) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,32)
+
+// -5.3617  !Temperature(r,C@tempvalue@33) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,33)
+
+// -5.28878  !Temperature(r,C@tempvalue@34) v Density(r,High)
+-5.28878  Density(a1,High) v !Temperature(a1,34)
+
+// -5.3617  !Temperature(r,C@tempvalue@35) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,35)
+
+// -5.3617  !Temperature(r,C@tempvalue@36) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,36)
+
+// -5.3617  !Temperature(r,C@tempvalue@37) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,37)
+
+// -5.3617  !Temperature(r,C@tempvalue@38) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,38)
+
+// -5.3617  !Temperature(r,C@tempvalue@39) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,39)
+
+// -5.3617  !Temperature(r,C@tempvalue@40) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,40)
+
+// -5.3617  !Temperature(r,C@tempvalue@41) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,41)
+
+// -5.3617  !Temperature(r,C@tempvalue@42) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,42)
+
+// -5.3617  !Temperature(r,C@tempvalue@43) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,43)
+
+// -5.3617  !Temperature(r,C@tempvalue@44) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,44)
+
+// -5.3617  !Temperature(r,C@tempvalue@45) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,45)
+
+// -5.3617  !Temperature(r,C@tempvalue@46) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,46)
+
+// -5.3617  !Temperature(r,C@tempvalue@47) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,47)
+
+// -5.3617  !Temperature(r,C@tempvalue@48) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,48)
+
+// -5.3617  !Temperature(r,C@tempvalue@49) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,49)
+
+// -5.3617  !Temperature(r,C@tempvalue@50) v Density(r,High)
+-5.3617  Density(a1,High) v !Temperature(a1,50)
+
+// 0.879579  Density(a1,a2!)
+0.879579  Density(a1,a2)
+
+// -8.68735  Temperature(a1,a2)
+-8.68735  Temperature(a1,a2)
+

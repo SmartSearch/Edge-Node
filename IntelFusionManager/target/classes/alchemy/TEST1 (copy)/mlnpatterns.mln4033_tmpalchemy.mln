@@ -1,0 +1,22 @@
+//predicate declarations
+status = {Low, High}
+tempValue = {Low, Medium, High}
+oneHourFrequencyValue = {Low, Medium, High}
+roi = {AIT}
+featureOfInterest = {Sun, Hot, Cloudy, Cold}
+
+OnehourFrequencyValue(featureOfInterest, oneHourFrequencyValue)
+TemperatureValue(roi, tempValue)
+Density(roi, status!)
+
+
+// Rules to weight
+
+// TemperatureValue(r, +temp), OnehourFrequencyValue(+featureOfInterest, +frequency)  => Density(r, Low)
+!TemperatureValue(r, +temp) v !OnehourFrequencyValue(+featureOfInterest, +frequency) v Density(r, Low)
+
+// TemperatureValue(r, +temp), !OnehourFrequencyValue(+featureOfInterest, +frequency) => Density(r, Low)
+!TemperatureValue(r, +temp) v !OnehourFrequencyValue(+featureOfInterest, +frequency) v Density(r, High)
+
+#include "mlnlow.db"
+

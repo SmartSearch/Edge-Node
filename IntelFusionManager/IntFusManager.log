@@ -1,0 +1,1464 @@
+Read the file configurationIMF.xml
+Retrieving data from http://dusk.ait.gr/SMARTEdgeNode/retrieveXML?feed=sdr_live&limit=1
+Density:0.0234, time: 2013-10-16T16:29:02.400Z
+/--------    Observations      ---------/
+CrowdDensityMeasurementValue(High)
+
+/---------------------------------------/
+----------------- parameters ----------------
+-i = src/alchemy/mlnpatterns.mln
+-cw = 
+-ow = 
+-queryEvidence = 0
+-m = 0
+-a = 0
+-p = 0
+-ms = 0
+-bp = 0
+-efbp = 0
+-decision = 0
+-simtp = 0
+-outputNetwork = 0
+-counts = 0
+-seed = -1
+-lazy = 0
+-lazyNoApprox = 0
+-memLimit = -1
+-PrintSamplePerIteration = 0
+-SAInterval = 100
+-MaxSeconds = 
+-SATempDownRatio = 0.9
+-SA = 0
+-hybrid = 0
+-propstdev = tmp.sd
+-contSamples = 
+-mwsMaxSteps = 1000000
+-tries = 1
+-targetWt = 0
+-breakHardClauses = 0
+-heuristic = 2
+-tabuLength = 10
+-lazyLowState = 0
+-burnMinSteps = 100
+-burnMaxSteps = 100
+-minSteps = -1
+-maxSteps = 1000
+-maxSeconds = -1
+-subInterval = 2
+-numRuns = 3
+-numSwap = 10
+-lifted = 0
+-useHC = 0
+-useCT = 0
+-convThresh = 0.0001
+-convIterations = 20
+-explicitRep = 0
+-hcCreateType = 0
+-hcCreateNoise = 0
+-lncIter = 0
+-noHC = 
+-numSolutions = 10
+-saRatio = 50
+-saTemperature = 80
+-lateSa = 1
+-numChains = 10
+-delta = 0.05
+-epsilonError = 0.01
+-fracConverged = 0.95
+-walksatType = 1
+-testConvergence = 0
+-samplesPerTest = 100
+-e = src/alchemy/mln.db
+-r = src/alchemy/mlnresults.results
+-q = Notification
+-f = 
+----------------- end of parameters ----------------
+Reading formulas and evidence predicates...
+Adding clauses to MLN...
+converting to CNF:
+formula 0: !CrowdDensityMeasurementValue(High) v Notification(Event,Jubilation)
+CNF conversion took 0 secs
+formula 1: !CrowdDensityMeasurementValue(Low) v Notification(Event,Accident)
+CNF conversion took 0 secs
+Set hard weight to 19.6537
+creating mrf...
+number of grounded predicates = 2
+number of grounded clauses = 1
+Time taken to construct MRF = 0 secs
+[VS] 0 secs
+>>> DONE: Initial num. of clauses: 1
+Initializing MC-SAT with MaxWalksat on hard clauses...
+Running MC-SAT sampling...
+Sample (per pred) 100, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Done burning. 100 samples.
+Sample (per pred) 100, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 200, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 300, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 400, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 500, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 600, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 700, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 800, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 900, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 1000, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Done MC-SAT sampling. 1000 samples.
+Final ground predicate number: 2
+Final ground clause number: 1
+Time taken for MC-SAT sampling = 0.02 secs
+Time taken for SampleSat = 0.02 secs
+Time-Results: Init 0 Run 0.02 Total 0.02
+total time taken = 0.02 secs
+Notification(Event,Accident) 0.010049
+Notification(Event,Jubilation) 0.989951
+
+//---------- Alchemy Output ---------///
+Notification(Event,Accident) 0.010049
+Notification(Event,Jubilation) 0.989951
+
+//---------- -------------- ---------///
+Notification(Event,Accident) 0.010049
+predicate: Notification
+subject: Event1381940942400
+object: Accident
+Probability: 0.01
+------------------------------------------------------------------------------------
+Notification(Event,Jubilation) 0.989951
+predicate: Notification
+subject: Event1381940942400
+object: Jubilation
+Probability: 0.98
+------------------------------------------------------------------------------------
+/--------    Post Result      ---------/
+{"_id":"2013-10-16T16:29:02.400Z","timestamp":1381940942400,"Probability":{"Notification":"0.98"}}
+/---------------------------------------/
+HTTP/1.1 201 Created [Date: Wed, 16 Oct 2013 16:46:53 GMT, Server: CouchDB/1.2.0 (Erlang OTP/R15B), Location: http://dusk.ait.gr/reasoning_feed_imperial/2013-10-16T16:29:02.400Z, Content-Type: text/plain; charset=utf-8, Content-Length: 87, Cache-Control: must-revalidate, Keep-Alive: timeout=5, max=100, Connection: Keep-Alive]
+Retrieving data from http://dusk.ait.gr/SMARTEdgeNode/retrieveXML?feed=sdr_live&limit=1
+Density:0.0413, time: 2013-10-16T16:30:02.410Z
+/--------    Observations      ---------/
+CrowdDensityMeasurementValue(High)
+
+/---------------------------------------/
+----------------- parameters ----------------
+-i = src/alchemy/mlnpatterns.mln
+-cw = 
+-ow = 
+-queryEvidence = 0
+-m = 0
+-a = 0
+-p = 0
+-ms = 0
+-bp = 0
+-efbp = 0
+-decision = 0
+-simtp = 0
+-outputNetwork = 0
+-counts = 0
+-seed = -1
+-lazy = 0
+-lazyNoApprox = 0
+-memLimit = -1
+-PrintSamplePerIteration = 0
+-SAInterval = 100
+-MaxSeconds = 
+-SATempDownRatio = 0.9
+-SA = 0
+-hybrid = 0
+-propstdev = tmp.sd
+-contSamples = 
+-mwsMaxSteps = 1000000
+-tries = 1
+-targetWt = 0
+-breakHardClauses = 0
+-heuristic = 2
+-tabuLength = 10
+-lazyLowState = 0
+-burnMinSteps = 100
+-burnMaxSteps = 100
+-minSteps = -1
+-maxSteps = 1000
+-maxSeconds = -1
+-subInterval = 2
+-numRuns = 3
+-numSwap = 10
+-lifted = 0
+-useHC = 0
+-useCT = 0
+-convThresh = 0.0001
+-convIterations = 20
+-explicitRep = 0
+-hcCreateType = 0
+-hcCreateNoise = 0
+-lncIter = 0
+-noHC = 
+-numSolutions = 10
+-saRatio = 50
+-saTemperature = 80
+-lateSa = 1
+-numChains = 10
+-delta = 0.05
+-epsilonError = 0.01
+-fracConverged = 0.95
+-walksatType = 1
+-testConvergence = 0
+-samplesPerTest = 100
+-e = src/alchemy/mln.db
+-r = src/alchemy/mlnresults.results
+-q = Notification
+-f = 
+----------------- end of parameters ----------------
+Reading formulas and evidence predicates...
+Adding clauses to MLN...
+converting to CNF:
+formula 0: !CrowdDensityMeasurementValue(High) v Notification(Event,Jubilation)
+CNF conversion took 0 secs
+formula 1: !CrowdDensityMeasurementValue(Low) v Notification(Event,Accident)
+CNF conversion took 0 secs
+Set hard weight to 19.6537
+creating mrf...
+number of grounded predicates = 2
+number of grounded clauses = 1
+Time taken to construct MRF = 0 secs
+[VS] 0 secs
+>>> DONE: Initial num. of clauses: 1
+Initializing MC-SAT with MaxWalksat on hard clauses...
+Running MC-SAT sampling...
+Sample (per pred) 100, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Done burning. 100 samples.
+Sample (per pred) 100, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 200, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 300, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 400, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 500, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 600, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 700, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 800, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 900, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 1000, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Done MC-SAT sampling. 1000 samples.
+Final ground predicate number: 2
+Final ground clause number: 1
+Time taken for MC-SAT sampling = 0.02 secs
+Time taken for SampleSat = 0.02 secs
+Time-Results: Init 0 Run 0.02 Total 0.02
+total time taken = 0.02 secs
+Notification(Event,Accident) 0.010049
+Notification(Event,Jubilation) 0.989951
+
+//---------- Alchemy Output ---------///
+Notification(Event,Accident) 0.010049
+Notification(Event,Jubilation) 0.989951
+
+//---------- -------------- ---------///
+Notification(Event,Accident) 0.010049
+predicate: Notification
+subject: Event1381941002410
+object: Accident
+Probability: 0.01
+------------------------------------------------------------------------------------
+Notification(Event,Jubilation) 0.989951
+predicate: Notification
+subject: Event1381941002410
+object: Jubilation
+Probability: 0.98
+------------------------------------------------------------------------------------
+/--------    Post Result      ---------/
+{"_id":"2013-10-16T16:30:02.410Z","timestamp":1381941002410,"Probability":{"Notification":"0.98"}}
+/---------------------------------------/
+HTTP/1.1 201 Created [Date: Wed, 16 Oct 2013 16:47:54 GMT, Server: CouchDB/1.2.0 (Erlang OTP/R15B), Location: http://dusk.ait.gr/reasoning_feed_imperial/2013-10-16T16:30:02.410Z, Content-Type: text/plain; charset=utf-8, Content-Length: 87, Cache-Control: must-revalidate, Keep-Alive: timeout=5, max=100, Connection: Keep-Alive]
+Retrieving data from http://dusk.ait.gr/SMARTEdgeNode/retrieveXML?feed=sdr_live&limit=1
+Density:0.0319, time: 2013-10-16T16:31:02.480Z
+/--------    Observations      ---------/
+CrowdDensityMeasurementValue(High)
+
+/---------------------------------------/
+----------------- parameters ----------------
+-i = src/alchemy/mlnpatterns.mln
+-cw = 
+-ow = 
+-queryEvidence = 0
+-m = 0
+-a = 0
+-p = 0
+-ms = 0
+-bp = 0
+-efbp = 0
+-decision = 0
+-simtp = 0
+-outputNetwork = 0
+-counts = 0
+-seed = -1
+-lazy = 0
+-lazyNoApprox = 0
+-memLimit = -1
+-PrintSamplePerIteration = 0
+-SAInterval = 100
+-MaxSeconds = 
+-SATempDownRatio = 0.9
+-SA = 0
+-hybrid = 0
+-propstdev = tmp.sd
+-contSamples = 
+-mwsMaxSteps = 1000000
+-tries = 1
+-targetWt = 0
+-breakHardClauses = 0
+-heuristic = 2
+-tabuLength = 10
+-lazyLowState = 0
+-burnMinSteps = 100
+-burnMaxSteps = 100
+-minSteps = -1
+-maxSteps = 1000
+-maxSeconds = -1
+-subInterval = 2
+-numRuns = 3
+-numSwap = 10
+-lifted = 0
+-useHC = 0
+-useCT = 0
+-convThresh = 0.0001
+-convIterations = 20
+-explicitRep = 0
+-hcCreateType = 0
+-hcCreateNoise = 0
+-lncIter = 0
+-noHC = 
+-numSolutions = 10
+-saRatio = 50
+-saTemperature = 80
+-lateSa = 1
+-numChains = 10
+-delta = 0.05
+-epsilonError = 0.01
+-fracConverged = 0.95
+-walksatType = 1
+-testConvergence = 0
+-samplesPerTest = 100
+-e = src/alchemy/mln.db
+-r = src/alchemy/mlnresults.results
+-q = Notification
+-f = 
+----------------- end of parameters ----------------
+Reading formulas and evidence predicates...
+Adding clauses to MLN...
+converting to CNF:
+formula 0: !CrowdDensityMeasurementValue(High) v Notification(Event,Jubilation)
+CNF conversion took 0 secs
+formula 1: !CrowdDensityMeasurementValue(Low) v Notification(Event,Accident)
+CNF conversion took 0 secs
+Set hard weight to 19.6537
+creating mrf...
+number of grounded predicates = 2
+number of grounded clauses = 1
+Time taken to construct MRF = 0 secs
+[VS] 0 secs
+>>> DONE: Initial num. of clauses: 1
+Initializing MC-SAT with MaxWalksat on hard clauses...
+Running MC-SAT sampling...
+Sample (per pred) 100, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Done burning. 100 samples.
+Sample (per pred) 100, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 200, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 300, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 400, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 500, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 600, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 700, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 800, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 900, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 1000, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Done MC-SAT sampling. 1000 samples.
+Final ground predicate number: 2
+Final ground clause number: 1
+Time taken for MC-SAT sampling = 0.02 secs
+Time taken for SampleSat = 0.02 secs
+Time-Results: Init 0 Run 0.02 Total 0.02
+total time taken = 0.02 secs
+Notification(Event,Accident) 0.010049
+Notification(Event,Jubilation) 0.989951
+
+//---------- Alchemy Output ---------///
+Notification(Event,Accident) 0.010049
+Notification(Event,Jubilation) 0.989951
+
+//---------- -------------- ---------///
+Notification(Event,Accident) 0.010049
+predicate: Notification
+subject: Event1381941062480
+object: Accident
+Probability: 0.01
+------------------------------------------------------------------------------------
+Notification(Event,Jubilation) 0.989951
+predicate: Notification
+subject: Event1381941062480
+object: Jubilation
+Probability: 0.98
+------------------------------------------------------------------------------------
+/--------    Post Result      ---------/
+{"_id":"2013-10-16T16:31:02.480Z","timestamp":1381941062480,"Probability":{"Notification":"0.98"}}
+/---------------------------------------/
+HTTP/1.1 201 Created [Date: Wed, 16 Oct 2013 16:48:56 GMT, Server: CouchDB/1.2.0 (Erlang OTP/R15B), Location: http://dusk.ait.gr/reasoning_feed_imperial/2013-10-16T16:31:02.480Z, Content-Type: text/plain; charset=utf-8, Content-Length: 87, Cache-Control: must-revalidate, Keep-Alive: timeout=5, max=100, Connection: Keep-Alive]
+Retrieving data from http://dusk.ait.gr/SMARTEdgeNode/retrieveXML?feed=sdr_live&limit=1
+Density:0.0317, time: 2013-10-16T16:32:02.550Z
+/--------    Observations      ---------/
+CrowdDensityMeasurementValue(High)
+
+/---------------------------------------/
+----------------- parameters ----------------
+-i = src/alchemy/mlnpatterns.mln
+-cw = 
+-ow = 
+-queryEvidence = 0
+-m = 0
+-a = 0
+-p = 0
+-ms = 0
+-bp = 0
+-efbp = 0
+-decision = 0
+-simtp = 0
+-outputNetwork = 0
+-counts = 0
+-seed = -1
+-lazy = 0
+-lazyNoApprox = 0
+-memLimit = -1
+-PrintSamplePerIteration = 0
+-SAInterval = 100
+-MaxSeconds = 
+-SATempDownRatio = 0.9
+-SA = 0
+-hybrid = 0
+-propstdev = tmp.sd
+-contSamples = 
+-mwsMaxSteps = 1000000
+-tries = 1
+-targetWt = 0
+-breakHardClauses = 0
+-heuristic = 2
+-tabuLength = 10
+-lazyLowState = 0
+-burnMinSteps = 100
+-burnMaxSteps = 100
+-minSteps = -1
+-maxSteps = 1000
+-maxSeconds = -1
+-subInterval = 2
+-numRuns = 3
+-numSwap = 10
+-lifted = 0
+-useHC = 0
+-useCT = 0
+-convThresh = 0.0001
+-convIterations = 20
+-explicitRep = 0
+-hcCreateType = 0
+-hcCreateNoise = 0
+-lncIter = 0
+-noHC = 
+-numSolutions = 10
+-saRatio = 50
+-saTemperature = 80
+-lateSa = 1
+-numChains = 10
+-delta = 0.05
+-epsilonError = 0.01
+-fracConverged = 0.95
+-walksatType = 1
+-testConvergence = 0
+-samplesPerTest = 100
+-e = src/alchemy/mln.db
+-r = src/alchemy/mlnresults.results
+-q = Notification
+-f = 
+----------------- end of parameters ----------------
+Reading formulas and evidence predicates...
+Adding clauses to MLN...
+converting to CNF:
+formula 0: !CrowdDensityMeasurementValue(High) v Notification(Event,Jubilation)
+CNF conversion took 0 secs
+formula 1: !CrowdDensityMeasurementValue(Low) v Notification(Event,Accident)
+CNF conversion took 0 secs
+Set hard weight to 19.6537
+creating mrf...
+number of grounded predicates = 2
+number of grounded clauses = 1
+Time taken to construct MRF = 0 secs
+[VS] 0 secs
+>>> DONE: Initial num. of clauses: 1
+Initializing MC-SAT with MaxWalksat on hard clauses...
+Running MC-SAT sampling...
+Sample (per pred) 100, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Done burning. 100 samples.
+Sample (per pred) 100, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 200, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 300, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 400, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 500, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 600, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 700, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 800, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 900, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 1000, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Done MC-SAT sampling. 1000 samples.
+Final ground predicate number: 2
+Final ground clause number: 1
+Time taken for MC-SAT sampling = 0.02 secs
+Time taken for SampleSat = 0.02 secs
+Time-Results: Init 0 Run 0.02 Total 0.02
+total time taken = 0.02 secs
+Notification(Event,Accident) 0.010049
+Notification(Event,Jubilation) 0.989951
+
+//---------- Alchemy Output ---------///
+Notification(Event,Accident) 0.010049
+Notification(Event,Jubilation) 0.989951
+
+//---------- -------------- ---------///
+Notification(Event,Accident) 0.010049
+predicate: Notification
+subject: Event1381941122550
+object: Accident
+Probability: 0.01
+------------------------------------------------------------------------------------
+Notification(Event,Jubilation) 0.989951
+predicate: Notification
+subject: Event1381941122550
+object: Jubilation
+Probability: 0.98
+------------------------------------------------------------------------------------
+/--------    Post Result      ---------/
+{"_id":"2013-10-16T16:32:02.550Z","timestamp":1381941122550,"Probability":{"Notification":"0.98"}}
+/---------------------------------------/
+HTTP/1.1 201 Created [Date: Wed, 16 Oct 2013 16:49:57 GMT, Server: CouchDB/1.2.0 (Erlang OTP/R15B), Location: http://dusk.ait.gr/reasoning_feed_imperial/2013-10-16T16:32:02.550Z, Content-Type: text/plain; charset=utf-8, Content-Length: 87, Cache-Control: must-revalidate, Keep-Alive: timeout=5, max=100, Connection: Keep-Alive]
+Retrieving data from http://dusk.ait.gr/SMARTEdgeNode/retrieveXML?feed=sdr_live&limit=1
+Density:0.0217, time: 2013-10-16T16:33:02.610Z
+/--------    Observations      ---------/
+CrowdDensityMeasurementValue(High)
+
+/---------------------------------------/
+----------------- parameters ----------------
+-i = src/alchemy/mlnpatterns.mln
+-cw = 
+-ow = 
+-queryEvidence = 0
+-m = 0
+-a = 0
+-p = 0
+-ms = 0
+-bp = 0
+-efbp = 0
+-decision = 0
+-simtp = 0
+-outputNetwork = 0
+-counts = 0
+-seed = -1
+-lazy = 0
+-lazyNoApprox = 0
+-memLimit = -1
+-PrintSamplePerIteration = 0
+-SAInterval = 100
+-MaxSeconds = 
+-SATempDownRatio = 0.9
+-SA = 0
+-hybrid = 0
+-propstdev = tmp.sd
+-contSamples = 
+-mwsMaxSteps = 1000000
+-tries = 1
+-targetWt = 0
+-breakHardClauses = 0
+-heuristic = 2
+-tabuLength = 10
+-lazyLowState = 0
+-burnMinSteps = 100
+-burnMaxSteps = 100
+-minSteps = -1
+-maxSteps = 1000
+-maxSeconds = -1
+-subInterval = 2
+-numRuns = 3
+-numSwap = 10
+-lifted = 0
+-useHC = 0
+-useCT = 0
+-convThresh = 0.0001
+-convIterations = 20
+-explicitRep = 0
+-hcCreateType = 0
+-hcCreateNoise = 0
+-lncIter = 0
+-noHC = 
+-numSolutions = 10
+-saRatio = 50
+-saTemperature = 80
+-lateSa = 1
+-numChains = 10
+-delta = 0.05
+-epsilonError = 0.01
+-fracConverged = 0.95
+-walksatType = 1
+-testConvergence = 0
+-samplesPerTest = 100
+-e = src/alchemy/mln.db
+-r = src/alchemy/mlnresults.results
+-q = Notification
+-f = 
+----------------- end of parameters ----------------
+Reading formulas and evidence predicates...
+Adding clauses to MLN...
+converting to CNF:
+formula 0: !CrowdDensityMeasurementValue(High) v Notification(Event,Jubilation)
+CNF conversion took 0 secs
+formula 1: !CrowdDensityMeasurementValue(Low) v Notification(Event,Accident)
+CNF conversion took 0 secs
+Set hard weight to 19.6537
+creating mrf...
+number of grounded predicates = 2
+number of grounded clauses = 1
+Time taken to construct MRF = 0 secs
+[VS] 0 secs
+>>> DONE: Initial num. of clauses: 1
+Initializing MC-SAT with MaxWalksat on hard clauses...
+Running MC-SAT sampling...
+Sample (per pred) 100, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Done burning. 100 samples.
+Sample (per pred) 100, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 200, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 300, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 400, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 500, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 600, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 700, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 800, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 900, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 1000, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Done MC-SAT sampling. 1000 samples.
+Final ground predicate number: 2
+Final ground clause number: 1
+Time taken for MC-SAT sampling = 0.02 secs
+Time taken for SampleSat = 0.02 secs
+Time-Results: Init 0 Run 0.02 Total 0.02
+total time taken = 0.02 secs
+Notification(Event,Accident) 0.010049
+Notification(Event,Jubilation) 0.989951
+
+//---------- Alchemy Output ---------///
+Notification(Event,Accident) 0.010049
+Notification(Event,Jubilation) 0.989951
+
+//---------- -------------- ---------///
+Notification(Event,Accident) 0.010049
+predicate: Notification
+subject: Event1381941182610
+object: Accident
+Probability: 0.01
+------------------------------------------------------------------------------------
+Notification(Event,Jubilation) 0.989951
+predicate: Notification
+subject: Event1381941182610
+object: Jubilation
+Probability: 0.98
+------------------------------------------------------------------------------------
+/--------    Post Result      ---------/
+{"_id":"2013-10-16T16:33:02.610Z","timestamp":1381941182610,"Probability":{"Notification":"0.98"}}
+/---------------------------------------/
+HTTP/1.1 201 Created [Date: Wed, 16 Oct 2013 16:50:59 GMT, Server: CouchDB/1.2.0 (Erlang OTP/R15B), Location: http://dusk.ait.gr/reasoning_feed_imperial/2013-10-16T16:33:02.610Z, Content-Type: text/plain; charset=utf-8, Content-Length: 87, Cache-Control: must-revalidate, Keep-Alive: timeout=5, max=100, Connection: Keep-Alive]
+Retrieving data from http://dusk.ait.gr/SMARTEdgeNode/retrieveXML?feed=sdr_live&limit=1
+Density:0.0283, time: 2013-10-16T16:34:02.680Z
+/--------    Observations      ---------/
+CrowdDensityMeasurementValue(High)
+
+/---------------------------------------/
+----------------- parameters ----------------
+-i = src/alchemy/mlnpatterns.mln
+-cw = 
+-ow = 
+-queryEvidence = 0
+-m = 0
+-a = 0
+-p = 0
+-ms = 0
+-bp = 0
+-efbp = 0
+-decision = 0
+-simtp = 0
+-outputNetwork = 0
+-counts = 0
+-seed = -1
+-lazy = 0
+-lazyNoApprox = 0
+-memLimit = -1
+-PrintSamplePerIteration = 0
+-SAInterval = 100
+-MaxSeconds = 
+-SATempDownRatio = 0.9
+-SA = 0
+-hybrid = 0
+-propstdev = tmp.sd
+-contSamples = 
+-mwsMaxSteps = 1000000
+-tries = 1
+-targetWt = 0
+-breakHardClauses = 0
+-heuristic = 2
+-tabuLength = 10
+-lazyLowState = 0
+-burnMinSteps = 100
+-burnMaxSteps = 100
+-minSteps = -1
+-maxSteps = 1000
+-maxSeconds = -1
+-subInterval = 2
+-numRuns = 3
+-numSwap = 10
+-lifted = 0
+-useHC = 0
+-useCT = 0
+-convThresh = 0.0001
+-convIterations = 20
+-explicitRep = 0
+-hcCreateType = 0
+-hcCreateNoise = 0
+-lncIter = 0
+-noHC = 
+-numSolutions = 10
+-saRatio = 50
+-saTemperature = 80
+-lateSa = 1
+-numChains = 10
+-delta = 0.05
+-epsilonError = 0.01
+-fracConverged = 0.95
+-walksatType = 1
+-testConvergence = 0
+-samplesPerTest = 100
+-e = src/alchemy/mln.db
+-r = src/alchemy/mlnresults.results
+-q = Notification
+-f = 
+----------------- end of parameters ----------------
+Reading formulas and evidence predicates...
+Adding clauses to MLN...
+converting to CNF:
+formula 0: !CrowdDensityMeasurementValue(High) v Notification(Event,Jubilation)
+CNF conversion took 0 secs
+formula 1: !CrowdDensityMeasurementValue(Low) v Notification(Event,Accident)
+CNF conversion took 0 secs
+Set hard weight to 19.6537
+creating mrf...
+number of grounded predicates = 2
+number of grounded clauses = 1
+Time taken to construct MRF = 0 secs
+[VS] 0 secs
+>>> DONE: Initial num. of clauses: 1
+Initializing MC-SAT with MaxWalksat on hard clauses...
+Running MC-SAT sampling...
+Sample (per pred) 100, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Done burning. 100 samples.
+Sample (per pred) 100, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 200, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 300, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 400, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 500, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 600, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 700, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 800, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 900, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 1000, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Done MC-SAT sampling. 1000 samples.
+Final ground predicate number: 2
+Final ground clause number: 1
+Time taken for MC-SAT sampling = 0.02 secs
+Time taken for SampleSat = 0.02 secs
+Time-Results: Init 0 Run 0.02 Total 0.02
+total time taken = 0.02 secs
+Notification(Event,Accident) 0.010049
+Notification(Event,Jubilation) 0.989951
+
+//---------- Alchemy Output ---------///
+Notification(Event,Accident) 0.010049
+Notification(Event,Jubilation) 0.989951
+
+//---------- -------------- ---------///
+Notification(Event,Accident) 0.010049
+predicate: Notification
+subject: Event1381941242680
+object: Accident
+Probability: 0.01
+------------------------------------------------------------------------------------
+Notification(Event,Jubilation) 0.989951
+predicate: Notification
+subject: Event1381941242680
+object: Jubilation
+Probability: 0.98
+------------------------------------------------------------------------------------
+/--------    Post Result      ---------/
+{"_id":"2013-10-16T16:34:02.680Z","timestamp":1381941242680,"Probability":{"Notification":"0.98"}}
+/---------------------------------------/
+HTTP/1.1 201 Created [Date: Wed, 16 Oct 2013 16:52:01 GMT, Server: CouchDB/1.2.0 (Erlang OTP/R15B), Location: http://dusk.ait.gr/reasoning_feed_imperial/2013-10-16T16:34:02.680Z, Content-Type: text/plain; charset=utf-8, Content-Length: 87, Cache-Control: must-revalidate, Keep-Alive: timeout=5, max=100, Connection: Keep-Alive]
+Retrieving data from http://dusk.ait.gr/SMARTEdgeNode/retrieveXML?feed=sdr_live&limit=1
+Density:0.0707, time: 2013-10-16T16:35:02.750Z
+/--------    Observations      ---------/
+CrowdDensityMeasurementValue(High)
+
+/---------------------------------------/
+----------------- parameters ----------------
+-i = src/alchemy/mlnpatterns.mln
+-cw = 
+-ow = 
+-queryEvidence = 0
+-m = 0
+-a = 0
+-p = 0
+-ms = 0
+-bp = 0
+-efbp = 0
+-decision = 0
+-simtp = 0
+-outputNetwork = 0
+-counts = 0
+-seed = -1
+-lazy = 0
+-lazyNoApprox = 0
+-memLimit = -1
+-PrintSamplePerIteration = 0
+-SAInterval = 100
+-MaxSeconds = 
+-SATempDownRatio = 0.9
+-SA = 0
+-hybrid = 0
+-propstdev = tmp.sd
+-contSamples = 
+-mwsMaxSteps = 1000000
+-tries = 1
+-targetWt = 0
+-breakHardClauses = 0
+-heuristic = 2
+-tabuLength = 10
+-lazyLowState = 0
+-burnMinSteps = 100
+-burnMaxSteps = 100
+-minSteps = -1
+-maxSteps = 1000
+-maxSeconds = -1
+-subInterval = 2
+-numRuns = 3
+-numSwap = 10
+-lifted = 0
+-useHC = 0
+-useCT = 0
+-convThresh = 0.0001
+-convIterations = 20
+-explicitRep = 0
+-hcCreateType = 0
+-hcCreateNoise = 0
+-lncIter = 0
+-noHC = 
+-numSolutions = 10
+-saRatio = 50
+-saTemperature = 80
+-lateSa = 1
+-numChains = 10
+-delta = 0.05
+-epsilonError = 0.01
+-fracConverged = 0.95
+-walksatType = 1
+-testConvergence = 0
+-samplesPerTest = 100
+-e = src/alchemy/mln.db
+-r = src/alchemy/mlnresults.results
+-q = Notification
+-f = 
+----------------- end of parameters ----------------
+Reading formulas and evidence predicates...
+Adding clauses to MLN...
+converting to CNF:
+formula 0: !CrowdDensityMeasurementValue(High) v Notification(Event,Jubilation)
+CNF conversion took 0 secs
+formula 1: !CrowdDensityMeasurementValue(Low) v Notification(Event,Accident)
+CNF conversion took 0 secs
+Set hard weight to 19.6537
+creating mrf...
+number of grounded predicates = 2
+number of grounded clauses = 1
+Time taken to construct MRF = 0 secs
+[VS] 0 secs
+>>> DONE: Initial num. of clauses: 1
+Initializing MC-SAT with MaxWalksat on hard clauses...
+Running MC-SAT sampling...
+Sample (per pred) 100, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Done burning. 100 samples.
+Sample (per pred) 100, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 200, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 300, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 400, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 500, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 600, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 700, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 800, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 900, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 1000, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Done MC-SAT sampling. 1000 samples.
+Final ground predicate number: 2
+Final ground clause number: 1
+Time taken for MC-SAT sampling = 0.02 secs
+Time taken for SampleSat = 0.02 secs
+Time-Results: Init 0 Run 0.02 Total 0.02
+total time taken = 0.02 secs
+Notification(Event,Accident) 0.010049
+Notification(Event,Jubilation) 0.989951
+
+//---------- Alchemy Output ---------///
+Notification(Event,Accident) 0.010049
+Notification(Event,Jubilation) 0.989951
+
+//---------- -------------- ---------///
+Notification(Event,Accident) 0.010049
+predicate: Notification
+subject: Event1381941302750
+object: Accident
+Probability: 0.01
+------------------------------------------------------------------------------------
+Notification(Event,Jubilation) 0.989951
+predicate: Notification
+subject: Event1381941302750
+object: Jubilation
+Probability: 0.98
+------------------------------------------------------------------------------------
+/--------    Post Result      ---------/
+{"_id":"2013-10-16T16:35:02.750Z","timestamp":1381941302750,"Probability":{"Notification":"0.98"}}
+/---------------------------------------/
+HTTP/1.1 201 Created [Date: Wed, 16 Oct 2013 16:53:04 GMT, Server: CouchDB/1.2.0 (Erlang OTP/R15B), Location: http://dusk.ait.gr/reasoning_feed_imperial/2013-10-16T16:35:02.750Z, Content-Type: text/plain; charset=utf-8, Content-Length: 87, Cache-Control: must-revalidate, Keep-Alive: timeout=5, max=100, Connection: Keep-Alive]
+Retrieving data from http://dusk.ait.gr/SMARTEdgeNode/retrieveXML?feed=sdr_live&limit=1
+Density:0.0707, time: 2013-10-16T16:35:02.750Z
+/--------    Observations      ---------/
+CrowdDensityMeasurementValue(High)
+
+/---------------------------------------/
+----------------- parameters ----------------
+-i = src/alchemy/mlnpatterns.mln
+-cw = 
+-ow = 
+-queryEvidence = 0
+-m = 0
+-a = 0
+-p = 0
+-ms = 0
+-bp = 0
+-efbp = 0
+-decision = 0
+-simtp = 0
+-outputNetwork = 0
+-counts = 0
+-seed = -1
+-lazy = 0
+-lazyNoApprox = 0
+-memLimit = -1
+-PrintSamplePerIteration = 0
+-SAInterval = 100
+-MaxSeconds = 
+-SATempDownRatio = 0.9
+-SA = 0
+-hybrid = 0
+-propstdev = tmp.sd
+-contSamples = 
+-mwsMaxSteps = 1000000
+-tries = 1
+-targetWt = 0
+-breakHardClauses = 0
+-heuristic = 2
+-tabuLength = 10
+-lazyLowState = 0
+-burnMinSteps = 100
+-burnMaxSteps = 100
+-minSteps = -1
+-maxSteps = 1000
+-maxSeconds = -1
+-subInterval = 2
+-numRuns = 3
+-numSwap = 10
+-lifted = 0
+-useHC = 0
+-useCT = 0
+-convThresh = 0.0001
+-convIterations = 20
+-explicitRep = 0
+-hcCreateType = 0
+-hcCreateNoise = 0
+-lncIter = 0
+-noHC = 
+-numSolutions = 10
+-saRatio = 50
+-saTemperature = 80
+-lateSa = 1
+-numChains = 10
+-delta = 0.05
+-epsilonError = 0.01
+-fracConverged = 0.95
+-walksatType = 1
+-testConvergence = 0
+-samplesPerTest = 100
+-e = src/alchemy/mln.db
+-r = src/alchemy/mlnresults.results
+-q = Notification
+-f = 
+----------------- end of parameters ----------------
+Reading formulas and evidence predicates...
+Adding clauses to MLN...
+converting to CNF:
+formula 0: !CrowdDensityMeasurementValue(High) v Notification(Event,Jubilation)
+CNF conversion took 0 secs
+formula 1: !CrowdDensityMeasurementValue(Low) v Notification(Event,Accident)
+CNF conversion took 0 secs
+Set hard weight to 19.6537
+creating mrf...
+number of grounded predicates = 2
+number of grounded clauses = 1
+Time taken to construct MRF = 0 secs
+[VS] 0 secs
+>>> DONE: Initial num. of clauses: 1
+Initializing MC-SAT with MaxWalksat on hard clauses...
+Running MC-SAT sampling...
+Sample (per pred) 100, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Done burning. 100 samples.
+Sample (per pred) 100, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 200, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 300, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 400, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 500, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 600, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 700, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 800, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 900, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 1000, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Done MC-SAT sampling. 1000 samples.
+Final ground predicate number: 2
+Final ground clause number: 1
+Time taken for MC-SAT sampling = 0.02 secs
+Time taken for SampleSat = 0.02 secs
+Time-Results: Init 0 Run 0.02 Total 0.02
+total time taken = 0.02 secs
+Notification(Event,Accident) 0.010049
+Notification(Event,Jubilation) 0.989951
+
+//---------- Alchemy Output ---------///
+Notification(Event,Accident) 0.010049
+Notification(Event,Jubilation) 0.989951
+
+//---------- -------------- ---------///
+Notification(Event,Accident) 0.010049
+predicate: Notification
+subject: Event1381941302750
+object: Accident
+Probability: 0.01
+------------------------------------------------------------------------------------
+Notification(Event,Jubilation) 0.989951
+predicate: Notification
+subject: Event1381941302750
+object: Jubilation
+Probability: 0.98
+------------------------------------------------------------------------------------
+/--------    Post Result      ---------/
+{"_id":"2013-10-16T16:35:02.750Z","timestamp":1381941302750,"Probability":{"Notification":"0.98"}}
+/---------------------------------------/
+HTTP/1.1 409 Conflict [Date: Wed, 16 Oct 2013 16:54:07 GMT, Server: CouchDB/1.2.0 (Erlang OTP/R15B), Content-Type: text/plain; charset=utf-8, Content-Length: 58, Cache-Control: must-revalidate, Keep-Alive: timeout=5, max=100, Connection: Keep-Alive]
+Retrieving data from http://dusk.ait.gr/SMARTEdgeNode/retrieveXML?feed=sdr_live&limit=1
+Density:0.0069, time: 2013-10-16T16:53:09.950Z
+/--------    Observations      ---------/
+CrowdDensityMeasurementValue(Low)
+
+/---------------------------------------/
+----------------- parameters ----------------
+-i = src/alchemy/mlnpatterns.mln
+-cw = 
+-ow = 
+-queryEvidence = 0
+-m = 0
+-a = 0
+-p = 0
+-ms = 0
+-bp = 0
+-efbp = 0
+-decision = 0
+-simtp = 0
+-outputNetwork = 0
+-counts = 0
+-seed = -1
+-lazy = 0
+-lazyNoApprox = 0
+-memLimit = -1
+-PrintSamplePerIteration = 0
+-SAInterval = 100
+-MaxSeconds = 
+-SATempDownRatio = 0.9
+-SA = 0
+-hybrid = 0
+-propstdev = tmp.sd
+-contSamples = 
+-mwsMaxSteps = 1000000
+-tries = 1
+-targetWt = 0
+-breakHardClauses = 0
+-heuristic = 2
+-tabuLength = 10
+-lazyLowState = 0
+-burnMinSteps = 100
+-burnMaxSteps = 100
+-minSteps = -1
+-maxSteps = 1000
+-maxSeconds = -1
+-subInterval = 2
+-numRuns = 3
+-numSwap = 10
+-lifted = 0
+-useHC = 0
+-useCT = 0
+-convThresh = 0.0001
+-convIterations = 20
+-explicitRep = 0
+-hcCreateType = 0
+-hcCreateNoise = 0
+-lncIter = 0
+-noHC = 
+-numSolutions = 10
+-saRatio = 50
+-saTemperature = 80
+-lateSa = 1
+-numChains = 10
+-delta = 0.05
+-epsilonError = 0.01
+-fracConverged = 0.95
+-walksatType = 1
+-testConvergence = 0
+-samplesPerTest = 100
+-e = src/alchemy/mln.db
+-r = src/alchemy/mlnresults.results
+-q = Notification
+-f = 
+----------------- end of parameters ----------------
+Reading formulas and evidence predicates...
+Adding clauses to MLN...
+converting to CNF:
+formula 0: !CrowdDensityMeasurementValue(High) v Notification(Event,Jubilation)
+CNF conversion took 0 secs
+formula 1: !CrowdDensityMeasurementValue(Low) v Notification(Event,Accident)
+CNF conversion took 0 secs
+Set hard weight to 19.6537
+creating mrf...
+number of grounded predicates = 2
+number of grounded clauses = 1
+Time taken to construct MRF = 0 secs
+[VS] 0 secs
+>>> DONE: Initial num. of clauses: 1
+Initializing MC-SAT with MaxWalksat on hard clauses...
+Running MC-SAT sampling...
+Sample (per pred) 100, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Done burning. 100 samples.
+Sample (per pred) 100, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 200, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 300, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 400, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 500, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 600, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 700, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 800, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 900, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 1000, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Done MC-SAT sampling. 1000 samples.
+Final ground predicate number: 2
+Final ground clause number: 1
+Time taken for MC-SAT sampling = 0.02 secs
+Time taken for SampleSat = 0.02 secs
+Time-Results: Init 0 Run 0.02 Total 0.02
+total time taken = 0.02 secs
+Notification(Event,Accident) 0.984952
+Notification(Event,Jubilation) 0.0150485
+
+//---------- Alchemy Output ---------///
+Notification(Event,Accident) 0.984952
+Notification(Event,Jubilation) 0.0150485
+
+//---------- -------------- ---------///
+Notification(Event,Accident) 0.984952
+predicate: Notification
+subject: Event1381942389950
+object: Accident
+Probability: 0.98
+------------------------------------------------------------------------------------
+Notification(Event,Jubilation) 0.0150485
+predicate: Notification
+subject: Event1381942389950
+object: Jubilation
+Probability: 0.01
+------------------------------------------------------------------------------------
+/--------    Post Result      ---------/
+{"_id":"2013-10-16T16:53:09.950Z","timestamp":1381942389950,"Probability":{"Notification":"0.01"}}
+/---------------------------------------/
+HTTP/1.1 201 Created [Date: Wed, 16 Oct 2013 16:55:08 GMT, Server: CouchDB/1.2.0 (Erlang OTP/R15B), Location: http://dusk.ait.gr/reasoning_feed_imperial/2013-10-16T16:53:09.950Z, Content-Type: text/plain; charset=utf-8, Content-Length: 87, Cache-Control: must-revalidate, Keep-Alive: timeout=5, max=100, Connection: Keep-Alive]
+Retrieving data from http://dusk.ait.gr/SMARTEdgeNode/retrieveXML?feed=sdr_live&limit=1
+Density:0.0356, time: 2013-10-16T16:54:10.040Z
+/--------    Observations      ---------/
+CrowdDensityMeasurementValue(High)
+
+/---------------------------------------/
+----------------- parameters ----------------
+-i = src/alchemy/mlnpatterns.mln
+-cw = 
+-ow = 
+-queryEvidence = 0
+-m = 0
+-a = 0
+-p = 0
+-ms = 0
+-bp = 0
+-efbp = 0
+-decision = 0
+-simtp = 0
+-outputNetwork = 0
+-counts = 0
+-seed = -1
+-lazy = 0
+-lazyNoApprox = 0
+-memLimit = -1
+-PrintSamplePerIteration = 0
+-SAInterval = 100
+-MaxSeconds = 
+-SATempDownRatio = 0.9
+-SA = 0
+-hybrid = 0
+-propstdev = tmp.sd
+-contSamples = 
+-mwsMaxSteps = 1000000
+-tries = 1
+-targetWt = 0
+-breakHardClauses = 0
+-heuristic = 2
+-tabuLength = 10
+-lazyLowState = 0
+-burnMinSteps = 100
+-burnMaxSteps = 100
+-minSteps = -1
+-maxSteps = 1000
+-maxSeconds = -1
+-subInterval = 2
+-numRuns = 3
+-numSwap = 10
+-lifted = 0
+-useHC = 0
+-useCT = 0
+-convThresh = 0.0001
+-convIterations = 20
+-explicitRep = 0
+-hcCreateType = 0
+-hcCreateNoise = 0
+-lncIter = 0
+-noHC = 
+-numSolutions = 10
+-saRatio = 50
+-saTemperature = 80
+-lateSa = 1
+-numChains = 10
+-delta = 0.05
+-epsilonError = 0.01
+-fracConverged = 0.95
+-walksatType = 1
+-testConvergence = 0
+-samplesPerTest = 100
+-e = src/alchemy/mln.db
+-r = src/alchemy/mlnresults.results
+-q = Notification
+-f = 
+----------------- end of parameters ----------------
+Reading formulas and evidence predicates...
+Adding clauses to MLN...
+converting to CNF:
+formula 0: !CrowdDensityMeasurementValue(High) v Notification(Event,Jubilation)
+CNF conversion took 0 secs
+formula 1: !CrowdDensityMeasurementValue(Low) v Notification(Event,Accident)
+CNF conversion took 0 secs
+Set hard weight to 19.6537
+creating mrf...
+number of grounded predicates = 2
+number of grounded clauses = 1
+Time taken to construct MRF = 0 secs
+[VS] 0 secs
+>>> DONE: Initial num. of clauses: 1
+Initializing MC-SAT with MaxWalksat on hard clauses...
+Running MC-SAT sampling...
+Sample (per pred) 100, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Done burning. 100 samples.
+Sample (per pred) 100, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 200, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 300, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 400, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 500, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 600, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 700, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 800, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 900, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 1000, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Done MC-SAT sampling. 1000 samples.
+Final ground predicate number: 2
+Final ground clause number: 1
+Time taken for MC-SAT sampling = 0.02 secs
+Time taken for SampleSat = 0.02 secs
+Time-Results: Init 0 Run 0.02 Total 0.02
+total time taken = 0.02 secs
+Notification(Event,Accident) 0.010049
+Notification(Event,Jubilation) 0.989951
+
+//---------- Alchemy Output ---------///
+Notification(Event,Accident) 0.010049
+Notification(Event,Jubilation) 0.989951
+
+//---------- -------------- ---------///
+Notification(Event,Accident) 0.010049
+predicate: Notification
+subject: Event1381942450040
+object: Accident
+Probability: 0.01
+------------------------------------------------------------------------------------
+Notification(Event,Jubilation) 0.989951
+predicate: Notification
+subject: Event1381942450040
+object: Jubilation
+Probability: 0.98
+------------------------------------------------------------------------------------
+/--------    Post Result      ---------/
+{"_id":"2013-10-16T16:54:10.040Z","timestamp":1381942450040,"Probability":{"Notification":"0.98"}}
+/---------------------------------------/
+HTTP/1.1 201 Created [Date: Wed, 16 Oct 2013 16:56:10 GMT, Server: CouchDB/1.2.0 (Erlang OTP/R15B), Location: http://dusk.ait.gr/reasoning_feed_imperial/2013-10-16T16:54:10.040Z, Content-Type: text/plain; charset=utf-8, Content-Length: 87, Cache-Control: must-revalidate, Keep-Alive: timeout=5, max=100, Connection: Keep-Alive]
+Retrieving data from http://dusk.ait.gr/SMARTEdgeNode/retrieveXML?feed=sdr_live&limit=1
+Density:0.078, time: 2013-10-16T16:55:10.140Z
+/--------    Observations      ---------/
+CrowdDensityMeasurementValue(High)
+
+/---------------------------------------/
+----------------- parameters ----------------
+-i = src/alchemy/mlnpatterns.mln
+-cw = 
+-ow = 
+-queryEvidence = 0
+-m = 0
+-a = 0
+-p = 0
+-ms = 0
+-bp = 0
+-efbp = 0
+-decision = 0
+-simtp = 0
+-outputNetwork = 0
+-counts = 0
+-seed = -1
+-lazy = 0
+-lazyNoApprox = 0
+-memLimit = -1
+-PrintSamplePerIteration = 0
+-SAInterval = 100
+-MaxSeconds = 
+-SATempDownRatio = 0.9
+-SA = 0
+-hybrid = 0
+-propstdev = tmp.sd
+-contSamples = 
+-mwsMaxSteps = 1000000
+-tries = 1
+-targetWt = 0
+-breakHardClauses = 0
+-heuristic = 2
+-tabuLength = 10
+-lazyLowState = 0
+-burnMinSteps = 100
+-burnMaxSteps = 100
+-minSteps = -1
+-maxSteps = 1000
+-maxSeconds = -1
+-subInterval = 2
+-numRuns = 3
+-numSwap = 10
+-lifted = 0
+-useHC = 0
+-useCT = 0
+-convThresh = 0.0001
+-convIterations = 20
+-explicitRep = 0
+-hcCreateType = 0
+-hcCreateNoise = 0
+-lncIter = 0
+-noHC = 
+-numSolutions = 10
+-saRatio = 50
+-saTemperature = 80
+-lateSa = 1
+-numChains = 10
+-delta = 0.05
+-epsilonError = 0.01
+-fracConverged = 0.95
+-walksatType = 1
+-testConvergence = 0
+-samplesPerTest = 100
+-e = src/alchemy/mln.db
+-r = src/alchemy/mlnresults.results
+-q = Notification
+-f = 
+----------------- end of parameters ----------------
+Reading formulas and evidence predicates...
+Adding clauses to MLN...
+converting to CNF:
+formula 0: !CrowdDensityMeasurementValue(High) v Notification(Event,Jubilation)
+CNF conversion took 0 secs
+formula 1: !CrowdDensityMeasurementValue(Low) v Notification(Event,Accident)
+CNF conversion took 0 secs
+Set hard weight to 19.6537
+creating mrf...
+number of grounded predicates = 2
+number of grounded clauses = 1
+Time taken to construct MRF = 0 secs
+[VS] 0 secs
+>>> DONE: Initial num. of clauses: 1
+Initializing MC-SAT with MaxWalksat on hard clauses...
+Running MC-SAT sampling...
+Sample (per pred) 100, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Done burning. 100 samples.
+Sample (per pred) 100, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 200, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 300, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 400, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 500, time elapsed = 0 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 600, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 700, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 800, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 900, time elapsed = 0.01 secs, num. preds = 2, num. clauses = 1
+Sample (per pred) 1000, time elapsed = 0.02 secs, num. preds = 2, num. clauses = 1
+Done MC-SAT sampling. 1000 samples.
+Final ground predicate number: 2
+Final ground clause number: 1
+Time taken for MC-SAT sampling = 0.02 secs
+Time taken for SampleSat = 0.02 secs
+Time-Results: Init 0 Run 0.02 Total 0.02
+total time taken = 0.02 secs
+Notification(Event,Accident) 0.010049
+Notification(Event,Jubilation) 0.989951
+
+//---------- Alchemy Output ---------///
+Notification(Event,Accident) 0.010049
+Notification(Event,Jubilation) 0.989951
+
+//---------- -------------- ---------///
+Notification(Event,Accident) 0.010049
+predicate: Notification
+subject: Event1381942510140
+object: Accident
+Probability: 0.01
+------------------------------------------------------------------------------------
+Notification(Event,Jubilation) 0.989951
+predicate: Notification
+subject: Event1381942510140
+object: Jubilation
+Probability: 0.98
+------------------------------------------------------------------------------------
+/--------    Post Result      ---------/
+{"_id":"2013-10-16T16:55:10.140Z","timestamp":1381942510140,"Probability":{"Notification":"0.98"}}
+/---------------------------------------/
+HTTP/1.1 201 Created [Date: Wed, 16 Oct 2013 16:57:11 GMT, Server: CouchDB/1.2.0 (Erlang OTP/R15B), Location: http://dusk.ait.gr/reasoning_feed_imperial/2013-10-16T16:55:10.140Z, Content-Type: text/plain; charset=utf-8, Content-Length: 87, Cache-Control: must-revalidate, Keep-Alive: timeout=5, max=100, Connection: Keep-Alive]

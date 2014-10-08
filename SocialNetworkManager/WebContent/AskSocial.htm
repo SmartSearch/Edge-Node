@@ -1,0 +1,483 @@
+<!--Code by Telesto Telesto Technologies-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Ask Social Networks</title>
+
+
+	<style type="text/css">
+H2 {
+	font: bold 1.4em/1.2em 'Segoe UI', 'Lucida Grande', Arial, Helvetica,
+		sans-serif;
+	color: #777;
+}
+
+body {
+	font: normal 0.8em/1.4em 'Segoe UI', Tahoma, Arial, 'Lucida Grande',
+		Verdana, Helvetica, sans-serif;
+	color: #777;
+}
+
+.roundInput {
+	border-radius: 7px;
+	-moz-border-radius: 7px;
+	-moz-border-radius: 7px;
+}
+
+.SearchBar {
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px #888;
+	box-shadow: 0 0 5px #888;
+	width: 270px;
+	height: 90px;
+	margin: auto auto;
+	padding: 0 0 3em 0;
+	padding-top: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 70px;
+	ont: normal 0.8em/1.4em 'Segoe UI', Tahoma, Arial, 'Lucida Grande',
+		Verdana, Helvetica, sans-serif;
+	text-align: center;
+}
+
+.ResultBar {
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px #888;
+	box-shadow: 0 0 5px #888;
+	margin: auto auto;
+	padding: 0 0 3em 0;
+	padding-left: 20px;
+	padding-right: 20px;
+	ont: normal 0.8em/1.4em 'Segoe UI', Tahoma, Arial, 'Lucida Grande',
+		Verdana, Helvetica, sans-serif;
+	text-align: left;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-right: 20px;
+}
+
+td.value {
+	background-image: url(gridline58.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	border-left: 1px solid #e5e5e5;
+	border-right: 1px solid #e5e5e5;
+	padding: 0;
+	border-bottom: none;
+	background-color: transparent;
+}
+
+td {
+	padding: 4px 6px;
+	border-bottom: 1px solid #e5e5e5;
+	border-left: 1px solid #e5e5e5;
+	background-color: #fff;
+}
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 80%;
+}
+
+td.value img {
+	vertical-align: middle;
+	margin: 5px 5px 5px 0;
+}
+
+th {
+	text-align: left;
+	vertical-align: top;
+}
+
+td.last {
+	border-bottom: 1px solid #e5e5e5;
+}
+
+td.first {
+	border-top: 1px solid #e5e5e5;
+}
+
+.auraltext {
+	position: absolute;
+	font-size: 0;
+	left: -1000px;
+}
+
+table {
+	background-image: url(bg_fade.png);
+	background-repeat: repeat-x;
+	background-position: left top;
+	width: 33em;
+}
+
+caption {
+	font-size: 90%;
+	font-style: italic;
+}
+
+a:link {
+	COLOR: #DD7500;
+}
+
+a:visited {
+	COLOR: #DD7500;
+}
+
+a:hover {
+	COLOR: #DD7500;
+}
+
+a:active {
+	COLOR: #DD7500;
+}
+</style>
+
+
+	<script src="Ask%20Twitter_files/jquery-1.js" type="text/javascript"></script>
+	<script src="Ask%20Twitter_files/jquery.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css"
+		href="Ask%20Twitter_files/buttons.css">
+
+		<script type="text/javascript">
+			function PostElement() {
+				this.UserName = '';
+				this.Message = '';
+				this.CreationDate = '';
+				this.Source = '';
+				this.UserID = '';
+			}
+
+			function search() {
+
+				queryTerm = document.getElementById('queryPar').value;
+				var results = "";
+
+				dname = "/SocialNetworkManager/Search/General/Posts/?term=" + queryTerm.replace("#","%23");
+						+ "&pagesize=20";
+				var client;
+				if (typeof window.ActiveXObject != 'undefined') {
+					client = new ActiveXObject("Microsoft.XMLHTTP");
+
+				} else {
+					client = new XMLHttpRequest();
+
+				}
+
+				client.open("get", dname, false);
+				client.send();
+
+				if (client.status == 200) {
+					resultsDiv = document.getElementById('resultsDiv');
+					resultsDiv.innerHTML = "";
+					xmlDoc = client.responseXML;
+					markerArray = new Array();
+
+					for (i = 0; i < xmlDoc.getElementsByTagName("Post").length; i++) {
+						children = xmlDoc.getElementsByTagName("Post")[i].childNodes;
+
+						var Element = new PostElement();
+
+						for (j = 0; j < children.length; j++) {
+
+							if (children[j].nodeName === "UserName") {
+								Element.UserName = children[j].childNodes[0].nodeValue;
+
+							}
+							if (children[j].nodeName === "Message") {
+								Element.Message = children[j].childNodes[0].nodeValue;
+
+							}
+							if (children[j].nodeName === "CreationDate") {
+								Element.CreationDate = children[j].childNodes[0].nodeValue;
+
+							}
+							if (children[j].nodeName === "Source") {
+								Element.Source = children[j].childNodes[0].nodeValue;
+
+							}
+							if (children[j].nodeName === "UserID") {
+								Element.UserID = children[j].childNodes[0].nodeValue;
+
+							}
+
+						}
+						resultsDiv = document.getElementById('resultsDiv');
+						resultsDiv.innerHTML = "";
+						if (Element.Source === "Twitter") {
+							results += "<div class='ResultBar' ><div><b>User Name:</b> "
+									+ "<a href='https://twitter.com/account/redirect_by_id?id="
+									+ Element.UserID
+									+ "''>"
+									+ Element.UserName
+									+ "</a><br/><b>Creation Date:</b> "
+									+ Element.CreationDate
+									+ "<br/><b>Source:</b> "
+									+ Element.Source
+									+ "<br/><b>Message:</b> "
+									+ Element.Message
+									+ "</div><img align='right' src='/SocialNetworkManager/Ask Twitter_files/Twitter-Logo1.png' /></div><br/>";
+						} else if (Element.Source === "Facebook") {
+							results += "<div class='ResultBar' ><div><b>User Name:</b> "
+									+ "<a href='https://www.facebook.com/"
+									+ Element.UserID
+									+ "''>"
+									+ Element.UserName
+									+ "</a><br/><b>Creation Date:</b> "
+									+ Element.CreationDate
+									+ "<br/><b>Source:</b> "
+									+ Element.Source
+									+ "<br/><b>Message:</b> "
+									+ Element.Message
+									+ "</div><img align='right' src='/SocialNetworkManager/Ask Twitter_files/Facebook-logo.png' /></div><br/>";
+						}
+					}
+					resultsDiv.innerHTML = results;
+					return false;
+				} else {
+					alert("The request did not succeed!\n\nThe response status was: ");
+				}
+			}
+
+			function nextPage() {
+
+				queryTerm = document.getElementById('queryPar').value;
+				var results = "";
+
+				dname = "/SocialNetworkManager/Search/General/Posts/nextpage";
+				var client;
+				if (typeof window.ActiveXObject != 'undefined') {
+					client = new ActiveXObject("Microsoft.XMLHTTP");
+
+				} else {
+					client = new XMLHttpRequest();
+
+				}
+
+				client.open("get", dname, false);
+				client.send();
+
+				if (client.status == 200) {
+
+					xmlDoc = client.responseXML;
+					markerArray = new Array();
+
+					for (i = 0; i < xmlDoc.getElementsByTagName("Post").length; i++) {
+						children = xmlDoc.getElementsByTagName("Post")[i].childNodes;
+
+						var Element = new PostElement();
+
+						for (j = 0; j < children.length; j++) {
+
+							if (children[j].nodeName === "UserName") {
+								Element.UserName = children[j].childNodes[0].nodeValue;
+
+							}
+							if (children[j].nodeName === "Message") {
+								Element.Message = children[j].childNodes[0].nodeValue;
+
+							}
+							if (children[j].nodeName === "CreationDate") {
+								Element.CreationDate = children[j].childNodes[0].nodeValue;
+
+							}
+							if (children[j].nodeName === "Source") {
+								Element.Source = children[j].childNodes[0].nodeValue;
+
+							}
+							if (children[j].nodeName === "UserID") {
+								Element.UserID = children[j].childNodes[0].nodeValue;
+
+							}
+
+						}
+						resultsDiv = document.getElementById('resultsDiv');
+						resultsDiv.innerHTML = "";
+						if (Element.Source === "Twitter") {
+							results += "<div class='ResultBar' ><div><b>User Name:</b> "
+									+ "<a href='https://twitter.com/account/redirect_by_id?id="
+									+ Element.UserID
+									+ "''>"
+									+ Element.UserName
+									+ "</a><br/><b>Creation Date:</b> "
+									+ Element.CreationDate
+									+ "<br/><b>Source:</b> "
+									+ Element.Source
+									+ "<br/><b>Message:</b> "
+									+ Element.Message
+									+ "</div><img align='right' src='/SocialNetworkManager/Ask Twitter_files/Twitter-Logo1.png' /></div><br/>";
+						} else if (Element.Source === "Facebook") {
+							results += "<div class='ResultBar' ><div><b>User Name:</b> "
+									+ "<a href='https://www.facebook.com/"
+									+ Element.UserID
+									+ "''>"
+									+ Element.UserName
+									+ "</a><br/><b>Creation Date:</b> "
+									+ Element.CreationDate
+									+ "<br/><b>Source:</b> "
+									+ Element.Source
+									+ "<br/><b>Message:</b> "
+									+ Element.Message
+									+ "</div><img align='right' src='/SocialNetworkManager/Ask Twitter_files/Facebook-logo.png' /></div><br/>";
+						}
+					}
+					resultsDiv.innerHTML = results;
+					return false;
+				} else {
+					alert("The request did not succeed!\n\nThe response status was: ");
+				}
+			}
+
+			function previousPage() {
+
+				queryTerm = document.getElementById('queryPar').value;
+				var results = "";
+
+				dname = "/SocialNetworkManager/Search/General/Posts/previouspage";
+				var client;
+				if (typeof window.ActiveXObject != 'undefined') {
+					client = new ActiveXObject("Microsoft.XMLHTTP");
+
+				} else {
+					client = new XMLHttpRequest();
+
+				}
+
+				client.open("get", dname, false);
+				client.send();
+
+				if (client.status == 200) {
+
+					xmlDoc = client.responseXML;
+					markerArray = new Array();
+
+					for (i = 0; i < xmlDoc.getElementsByTagName("Post").length; i++) {
+						children = xmlDoc.getElementsByTagName("Post")[i].childNodes;
+
+						var Element = new PostElement();
+
+						for (j = 0; j < children.length; j++) {
+
+							if (children[j].nodeName === "UserName") {
+								Element.UserName = children[j].childNodes[0].nodeValue;
+
+							}
+							if (children[j].nodeName === "Message") {
+								Element.Message = children[j].childNodes[0].nodeValue;
+
+							}
+							if (children[j].nodeName === "CreationDate") {
+								Element.CreationDate = children[j].childNodes[0].nodeValue;
+
+							}
+							if (children[j].nodeName === "Source") {
+								Element.Source = children[j].childNodes[0].nodeValue;
+
+							}
+							if (children[j].nodeName === "UserID") {
+								Element.UserID = children[j].childNodes[0].nodeValue;
+
+							}
+
+						}
+						resultsDiv = document.getElementById('resultsDiv');
+						resultsDiv.innerHTML = "";
+						if (Element.Source === "Twitter") {
+							results += "<div class='ResultBar' ><div><b>User Name:</b> "
+									+ "<a href='https://twitter.com/account/redirect_by_id?id="
+									+ Element.UserID
+									+ "''>"
+									+ Element.UserName
+									+ "</a><br/><b>Creation Date:</b> "
+									+ Element.CreationDate
+									+ "<br/><b>Source:</b> "
+									+ Element.Source
+									+ "<br/><b>Message:</b> "
+									+ Element.Message
+									+ "</div><img align='right' src='/SocialNetworkManager/Ask Twitter_files/Twitter-Logo1.png' /></div><br/>";
+						} else if (Element.Source === "Facebook") {
+							results += "<div class='ResultBar' ><div><b>User Name:</b> "
+									+ "<a href='https://www.facebook.com/"
+									+ Element.UserID
+									+ "''>"
+									+ Element.UserName
+									+ "</a><br/><b>Creation Date:</b> "
+									+ Element.CreationDate
+									+ "<br/><b>Source:</b> "
+									+ Element.Source
+									+ "<br/><b>Message:</b> "
+									+ Element.Message
+									+ "</div><img align='right' src='/SocialNetworkManager/Ask Twitter_files/Facebook-logo.png' /></div><br/>";
+						}
+					}
+					resultsDiv.innerHTML = results;
+					return false;
+				} else {
+					alert("The request did not succeed!\n\nThe response status was: ");
+				}
+			}
+		</script>
+</head>
+
+
+<body>
+
+	<div class="SearchBar">
+
+
+		<h2>Social Network Search Engine</h2>
+		<p>
+			Search for terms related to: <br> <input class="roundInput"
+				id="queryPar" name="queryPar" type="text"> <br><br>
+							<input onclick="search()" class="button small orange rounded"
+							value="Search" type="button"> <a
+								class="button small green rounded" href="">Help</a>
+		</p>
+
+	</div>
+
+
+
+	<br />
+	<h2 align="center">Results:</h2>
+
+	<div align="center" id="controlsDiv">
+		<a onclick="previousPage()" class="button small green rounded">Previous</a>
+		<a onclick="nextPage()" class="button small green rounded">Next</a>
+
+	</div>
+
+	<br />
+	<div id="resultsDiv" class="SearchBar"
+		style="width: 800px; height: 400px; overflow: auto; margin-left: auto; margin-right: auto;"></div>
+
+
+	<table align="center" border="0">
+		<tbody>
+			<tr>
+				<td><a href="https://facebook.com" border="0"><img
+						src="Ask%20Twitter_files/fb.png"></a></td>
+				<td><a href="https://twitter.com/" border="0"><img
+						src="Ask%20Twitter_files/twitter-logo.png"></a></td>
+			</tr>
+			<tr>
+				<td><a href="http://www.telesto.gr/index.php?lang=en"
+					border="0"><img src="Ask%20Twitter_files/telesto-logo.png"></a></td>
+				<td><a href="http://www.smartfp7.eu/" border="0"><img
+						src="Ask%20Twitter_files/smart-logo.png"></a></td>
+			</tr>
+		</tbody>
+	</table>
+
+
+</body>
+</html>

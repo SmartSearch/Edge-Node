@@ -15,6 +15,8 @@
 """The third Multimedia Data Manager.
 This module waits for events from the KB and creates and stores a video clip"""
 
+# This file must work in python >2.7 and >3.3
+
 import sqlite3
 import datetime, calendar
 import os
@@ -22,7 +24,11 @@ import logging
 import random
 import time
 import subprocess
-import ConfigParser
+import sys
+if sys.version_info < (3,):
+    import ConfigParser as cp
+else:
+    import configparser as cp
 import argparse
 import logging
 import couchdb
@@ -40,7 +46,7 @@ def textisotimeToTimestamp(isotext):
 def getConf(filename,section):
     """Populate the conf object"""
     dict1 = {}
-    config = ConfigParser.ConfigParser()
+    config = cp.ConfigParser()
     config.read(filename)
     options = config.options(section)
     for option in options:
@@ -128,6 +134,7 @@ def curl_move(path,conf):
     logging.debug(cmd)
     try:
         output = subprocess.check_output(cmd,shell=True)
+        output = str(output) #in Python 3, output is a byte, we need it as a string
     except subprocess.CalledProcessError as e:
         #this captures only the most clear errors
         logging.exception("Cmd returned {}".format(e.returncode))
@@ -225,7 +232,10 @@ def readIniFile():
     logging.debug("{} {}".format(conf_file, section))
 
     conf = {}
-    config = ConfigParser.ConfigParser()
+    if sys.version_info < (3,):
+        config = cp.ConfigParser()
+    else:
+        config = cp.ConfigParser(interpolation=None)
     config.read(conf_file)
     options = config.options(section)
     for option in options:

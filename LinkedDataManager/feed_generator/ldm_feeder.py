@@ -1,14 +1,14 @@
-## 
+##
 ##SMART FP7 - Search engine for MultimediA enviRonment generated contenT
 ##Webpage: http://smartfp7.eu
 ##
 ## This Source Code Form is subject to the terms of the Mozilla Public
 ## License, v. 2.0. If a copy of the MPL was not distributed with this
-## file, You can obtain one at http://mozilla.org/MPL/2.0/. 
-## 
+## file, You can obtain one at http://mozilla.org/MPL/2.0/.
+##
 ## The Original Code is Copyright (c) 2012-2013 Atos
 ## All Rights Reserved
-## 
+##
 ## Contributor(s):
 ## Jose Miguel Garrido, jose.garridog at atos dot net
 ##
@@ -27,7 +27,7 @@ import couchdb
 def getConf(filename,section):
     dict1 = {}
     config = ConfigParser.ConfigParser()
-    config.read(filename)    
+    config.read(filename)
     options = config.options(section)
     for option in options:
         try:
@@ -37,7 +37,7 @@ def getConf(filename,section):
             dict1[option] = None
     dict1["wait_time"] = int(dict1["wait_time"])
     dict1["couch_server"] = dict1["couch_server"] if (dict1["couch_server"]!="None") else None
-    
+
     return dict1
 
 def createURL(conf):
@@ -88,11 +88,11 @@ def createURL(conf):
                                                                 conf["coord1_lat"],
                                                                 conf["coord1_long"],
                                                                 conf["coord2_lat"],
-                                                                conf["coord2_long"])          
-        
+                                                                conf["coord2_long"])
+
     logging.debug(url)
     logging.debug(query)
-    
+
     return url, query
 
 def formatItem(key,doc,time_query,query_info,num):
@@ -157,13 +157,13 @@ if __name__ == '__main__':
     while True:   #until loop
         conf = getConf(conf_file,section)
 
-        couch = couchdb.Server(conf["couch_server"]) if conf["couch_server"] else couchdb.Server() 
+        couch = couchdb.Server(conf["couch_server"]) if conf["couch_server"] else couchdb.Server()
         db = couch[conf["couch_database"]]
 
         #the program itself
 
         url, query_info = createURL(conf)
-        
+
 
         response = urllib2.urlopen(url).read()
         response = json.loads(response)
@@ -176,7 +176,7 @@ if __name__ == '__main__':
         for num, i in enumerate(response["data"][items]):
             responseItem = formatItem(i,response["data"][items][i],
                                       response["data"]["time"],query_info, num)
-            
+
             storeItem(db, responseItem)
 
         if conf["wait_time"] == 0:

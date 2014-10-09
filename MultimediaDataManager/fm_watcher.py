@@ -16,13 +16,17 @@
 """The third Multimedia Data Manager.
 This module stores the metadata from XML files to a SQLite database.
 The video generator uses this database to create the actual video clips"""
+# This file must work in python >2.7 and >3.3
 import fnmatch
 import os
 import sys
 import datetime
 import calendar
 import logging
-import ConfigParser
+if sys.version_info < (3,):
+    import ConfigParser as cp
+else:
+    import configparser as cp
 import argparse
 
 import sqlite3
@@ -35,8 +39,12 @@ def textisotimeToTimestamp(isotext):
     SQLITE has some functions for translating dates,
     but I prefer using  the milisecond format as the rest of SMART"""
     dt = datetime.datetime.strptime(isotext, "%Y-%m-%dT%H:%M:%S.%fZ" )
-    return (calendar.timegm(dt.timetuple())*1000) + (dt.microsecond/1000)
-    # python 3.3 datetime.timestamp()
+    if sys.version_info < (3,):
+        return (calendar.timegm(dt.timetuple())*1000) + (dt.microsecond/1000)
+    else:
+        # in python 3, we must use integer division operator //
+        return (calendar.timegm(dt.timetuple())*1000) + (dt.microsecond//1000)
+        # other method can be use python 3.3 datetime.timestamp()
 
 def createDatabase(listChunks):
     """Creates the database for video metadata and initializaes it with the static data from the
@@ -177,6 +185,7 @@ if sys.platform.startswith("linux"):
 
     def monitor_linux():
         """Initializes the monitoring of events, as new files or deletion"""
+        logging.debug("Entering monitor_linux")
         p = HandleEvents()
         wm = pyinotify.WatchManager()
         mask = (pyinotify.IN_CLOSE_WRITE|pyinotify.IN_DELETE|pyinotify.IN_CREATE)
@@ -215,7 +224,10 @@ def readIniFile():
     logging.debug("{} {}".format(conf_file, section))
 
     conf = {}
-    config = ConfigParser.ConfigParser()
+    if sys.version_info < (3,):
+        config = cp.ConfigParser()
+    else:
+        config = cp.ConfigParser(interpolation=None)
     config.read(conf_file)
     options = config.options(section)
     for option in options:

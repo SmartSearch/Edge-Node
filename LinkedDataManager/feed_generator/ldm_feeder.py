@@ -14,19 +14,21 @@
 ##
 
 
-
-import urllib, urllib2
+if p_v == 2:
+    import urllib, urllib2
+    import ConfigParser as cp
+else:
+    import urllib.request, urllib.parse, urllib.error
+    import configparser as cp
 import json
 import couchdb
-import ConfigParser
 import argparse
 import logging
 import time, datetime
-import couchdb
 
 def getConf(filename,section):
     dict1 = {}
-    config = ConfigParser.ConfigParser()
+    config = cp.ConfigParser()
     config.read(filename)    
     options = config.options(section)
     for option in options:
@@ -48,10 +50,18 @@ def createURL(conf):
             target = "venues"
         else:
             target = "activities"
-        url = '{}/{}/{}?label=%22{}%22'.format(conf["url_base"],command,
+        if p_v == 2:
+            url = '{}/{}/{}?label=%22{}%22'.format(conf["url_base"],command,
                                                target,
                                                urllib.quote(conf["keywords"]))
-        query.update({ "keywords":conf["keywords"].split(), "searched_item":conf["search_for"], "search_type":"textual" })
+        else:
+            url = '{}/{}/{}?label=%22{}%22'.format(conf["url_base"],command,
+                                               target,
+                                               urllib.parse.quote(conf["keywords"]))
+
+        query.update({ "keywords":conf["keywords"].split(),
+                       "searched_item":conf["search_for"],
+                       "search_type":"textual" })
     elif conf["search_type"] == "geo-search":
         command = "structuredSearch"
         query.update({"search_type":"geo-search"})
@@ -164,8 +174,10 @@ if __name__ == '__main__':
 
         url, query_info = createURL(conf)
         
-
-        response = urllib2.urlopen(url).read()
+        if p_v == 2:
+            response = urllib2.urlopen(url).read()
+        else:
+            response = urllib.request.urlopen(url).read()
         response = json.loads(response)
 
         if "locations" in response["data"]:

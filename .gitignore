@@ -1,3 +1,4 @@
+/MultimediaDataManager/tmp2239.mvk
 *.class
 
 # Mobile Tools for Java (J2ME)
@@ -10,6 +11,8 @@
 
 # added for Python, JMG
 *.pyc
+*.mkv
+*.py~
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*

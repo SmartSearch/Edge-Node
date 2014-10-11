@@ -1,0 +1,5 @@
+TemperatureValue(AIT, Low)
+ApplauseScoreValue(AIT, Low)
+OnehourFrequencyValue(Livemusic, Low)
+CrowdDensityValue(AIT, Low)
+!notification(AIT, High)

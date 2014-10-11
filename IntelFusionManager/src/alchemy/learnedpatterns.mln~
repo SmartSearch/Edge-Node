@@ -1,0 +1,8 @@
+//predicate declarations
+status = {Low, High}
+//crowd(crowdv)
+density(crowd,status!)
+alert(crowd,status)
+
+4.82683 !density(a1,High) v alert(a1,High)
+-4.0 !density(a1,Low) v alert(a1,High)

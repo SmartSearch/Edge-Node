@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<configuration>
+
+	<alchemyPath>/home/smart/Imperial/alchemy/bin/</alchemyPath>
+	<alchemyDBPath>src/alchemy/mln.db</alchemyDBPath>
+	<alchemyMlnPatternsPath>src/alchemy/mlnpatterns.mln</alchemyMlnPatternsPath>
+	<alchemyMlnResultsPath>src/alchemy/mlnresults.results</alchemyMlnResultsPath>
+	
+	<alchemyFactsForLearning>src/alchemy/mln0.db</alchemyFactsForLearning>
+	<alchemyLearnedWeights>src/alchemy/learnedpatterns.mln</alchemyLearnedWeights>
+	<alchemyRulesDefiniton>src/alchemy/mlnpatterns.mln </alchemyRulesDefiniton>
+
+	<nameSpace>
+	   <prefix>smart-fp7</prefix>
+	   <value>http://www.smartfp7.eu#</value>
+    </nameSpace> 
+
+	<urlGetCouchDB>http://dusk.ait.gr/SMARTEdgeNode/retrieveXML?feed=sdr_live&amp;limit=1</urlGetCouchDB>
+	<feeds>  
+	  <feed>sdr_live</feed>
+	  <feed>telestoarduinofeed</feed>
+	</feeds>
+	<limit>1</limit>
+	<urlPostCouchDB>http://dusk.ait.gr/couchdb/reasoning_feed_imperial</urlPostCouchDB>
+	
+	<requestPeriod>60000</requestPeriod>
+	
+
+</configuration>

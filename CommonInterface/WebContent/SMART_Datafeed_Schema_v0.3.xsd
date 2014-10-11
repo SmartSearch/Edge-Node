@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:simpleType name="FeedCategory">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Physical"/>
+			<xs:enumeration value="Virtual"/>
+			<xs:enumeration value="Mixed"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ExposureType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Indoor"/>
+			<xs:enumeration value="Outdoor"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="DispositionType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Fixed"/>
+			<xs:enumeration value="Mobile"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="WorkingStatusType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ON"/>
+			<xs:enumeration value="OFF"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="StringList">
+		<xs:list itemType="xs:string"/>
+	</xs:simpleType>
+
+	<xs:simpleType name="IntegerList">
+		<xs:list itemType="xs:integer"/>
+	</xs:simpleType>
+
+	<xs:simpleType name="URIList">
+		<xs:list itemType="xs:anyURI"/>
+	</xs:simpleType>
+
+	<xs:element name="DescriptionTagsList" type="xs:anySimpleType" abstract="true"/>
+	<xs:element name="URITags" type="URIList" substitutionGroup="DescriptionTagsList"/>
+	<xs:element name="TextTags" type="StringList" substitutionGroup="DescriptionTagsList"/>
+
+	<xs:simpleType name="LongitudeDouble">
+		<xs:restriction base="xs:double">
+			<xs:minInclusive value="-180.0"/>
+			<xs:maxExclusive value="180.0"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="LatitudeDouble">
+		<xs:restriction base="xs:double">
+			<xs:minExclusive value="-90.0"/>
+			<xs:maxExclusive value="90.0"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="perCentDouble">
+		<xs:restriction base="xs:double">
+			<xs:minInclusive value="0.0"/>
+			<xs:maxInclusive value="1.0"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="emailAddress">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="NameType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([a-z_0-9])+"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="OutputDataType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="boolean"/>
+			<xs:enumeration value="integer"/>
+			<xs:enumeration value="double"/>
+			<xs:enumeration value="string"/>
+			<xs:enumeration value="array(boolean)"/>
+			<xs:enumeration value="array(integer)"/>
+			<xs:enumeration value="array(double)"/>
+			<xs:enumeration value="array(string)"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="GeolocationType">
+		<xs:sequence>
+			<xs:element name="Longitude" type="LongitudeDouble"/>
+			<xs:element name="Latitude" type="LatitudeDouble"/>
+			<xs:element name="Elevation" type="xs:double" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ContactInfoType">
+		<xs:sequence>
+			<xs:element name="Website" type="xs:anyURI" minOccurs="0"/>
+			<xs:element name="ContactEmail" type="emailAddress"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="PhysicalComponent">
+		<xs:sequence>
+			<xs:element name="Name" type="NameType"/>
+			<xs:element name="Description" type="xs:string"/>
+			<xs:element name="DescriptionTags" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="DescriptionTagsList" maxOccurs="2"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Geolocation" type="GeolocationType" minOccurs="0"/>
+			<xs:element name="Type" type="xs:string"/>
+			<xs:element name="Exposure" type="ExposureType"/>
+			<xs:element name="Disposition" type="DispositionType"/>
+			<xs:element name="SerialNumber" type="xs:string" minOccurs="0"/>
+			<xs:element name="PartNumber" type="xs:string" minOccurs="0"/>
+			<xs:element name="Manufacturer" type="xs:string" minOccurs="0"/>
+			<xs:element name="WorkingStatus" type="WorkingStatusType" minOccurs="0"/>
+			<xs:element name="Efficiency" type="perCentDouble" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="VirtualComponent">
+		<xs:sequence>
+			<xs:element name="Name" type="NameType"/>
+			<xs:element name="Description" type="xs:string"/>
+			<xs:element name="DescriptionTags" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="DescriptionTagsList" maxOccurs="2"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Type" type="xs:string"/>
+			<xs:element name="Efficiency" type="perCentDouble" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="OutputType">
+		<xs:sequence>
+			<xs:element name="Name" type="NameType"/>
+			<xs:element name="ProducedBy" type="NameType"/>
+			<xs:element name="Description" type="xs:string" minOccurs="0"/>
+			<xs:element name="DescriptionTags" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="DescriptionTagsList" maxOccurs="2"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Type" type="OutputDataType"/>
+			<xs:element name="Unit" type="xs:string" minOccurs="0"/>
+			<xs:element name="HasConfidence" type="xs:boolean"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="ComponentsType" type="xs:anyType" abstract="true"/>
+	<xs:element name="Physical" type="PhysicalComponent" substitutionGroup="ComponentsType"/>
+	<xs:element name="Virtual" type="VirtualComponent" substitutionGroup="ComponentsType"/>
+
+	<xs:complexType name="FeedType">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:anyURI"/>
+			<xs:element name="Type" type="FeedCategory"/>
+			<xs:element name="Title" type="xs:string"/>
+			<xs:element name="Description" type="xs:string"/>
+			<xs:element name="DescriptionTags" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="DescriptionTagsList" maxOccurs="2"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Geolocation" type="GeolocationType" minOccurs="0"/>
+			<xs:element name="ContactInfo" type="ContactInfoType" minOccurs="0"/>
+			<xs:element name="Components" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="ComponentsType" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Outputs">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Output" type = "OutputType" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="Feed" type="FeedType" />
+
+</xs:schema> 

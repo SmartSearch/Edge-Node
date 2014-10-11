@@ -1,0 +1,13 @@
+//predicate declarations
+status = {Low, High}
+eventType = {Accident, Jubilation}
+thing = {Event}
+
+
+//crowd(crowdv)
+CrowdDensityMeasurementValue(status!)
+//TemperatureMeasurementValue(status!)
+Notification(thing, eventType!)
+
+4.82683 !CrowdDensityMeasurementValue(High) v Notification(Event, Jubilation) 
+//-4.0 !density(a1, Low) v !notification(a1, High)

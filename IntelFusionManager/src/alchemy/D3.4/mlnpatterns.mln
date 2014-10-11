@@ -1,0 +1,11 @@
+//predicate declarations
+status = {Low, High}
+tempvalue = {0,...,50}
+roi = {AIT}
+
+Density(roi, status!)
+Temperature(roi, tempvalue)
+
+// Rules to weight
+!Temperature(r, +temp) v Density(r, Low)
+!Temperature(r, +temp) v Density(r, High)
